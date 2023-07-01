@@ -14,3 +14,45 @@ body {
 body {
   font-family: "SF Pro Display", sans-serif;
 }
+
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.attend-tab-list {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-left: -101px;
+}
+
+.attend-tab {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  outline: none;
+  padding: 0.625rem 1.5rem;
+  border-radius: 3rem;
+  border: 2px solid #b88d38;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}

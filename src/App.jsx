@@ -1,8 +1,19 @@
-import { useState } from "react";
+// import { useState } from "react";
 import egfm_logo from "./assets/egfm_logo.png";
 import arrow_down from "./assets/arrow_down.png";
 import hero_img from "./assets/hero_img.png";
 import about_img from "./assets/about_img.png";
+import gallery1 from "./assets/gallery1.png";
+import gallery2 from "./assets/gallery2.png";
+import gallery3 from "./assets/gallery3.png";
+import gallery4 from "./assets/gallery4.png";
+import gallery5 from "./assets/gallery5.png";
+import gallery6 from "./assets/gallery6.png";
+import gallery7 from "./assets/gallery7.png";
+import gallery8 from "./assets/gallery8.png";
+import minister1 from "./assets/minister1.png";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Faq from "./Faq";
 
 function App() {
   return (
@@ -163,7 +174,7 @@ function App() {
           </p>
         </div>
 
-        <div className="mt-[4.94rem] flex items-center justify-center justify-between">
+        <div className="mt-[4.94rem] flex items-center justify-center gap-[4.625rem]">
           <div className="flex items-start gap-[1.9375rem]">
             <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
             <div className="w-[20.125rem]">
@@ -204,11 +215,194 @@ function App() {
       </div>
 
       {/* WHY YOU SHOULD ATTEND */}
-      <div className="px-32 mt-[11.88rem]">
+      <div className="mt-[11.88rem]">
         <div className="flex items-center justify-center">
-          <h1 className="text-2xl font-extrabold leading-[1.9rem] w-[25.375rem] w-full">
+          <h1 className="text-2xl font-extrabold leading-[1.9rem] w-[25.375rem]">
             WHY YOU SHOULD ATTEND BELIEVERS’ CONVENTION?
           </h1>
+        </div>
+        <div className="">
+          <Tabs>
+            <TabList className={"attend-tab-list"}>
+              <Tab className={"attend-tab"}>Ministers</Tab>
+              <Tab className={"attend-tab"}>Participants</Tab>
+            </TabList>
+
+            <TabPanel></TabPanel>
+            <TabPanel>
+              <h2>Any content 2</h2>
+            </TabPanel>
+          </Tabs>
+
+          <div
+            className="w-full h-[138.375rem] mt-[3.75rem]"
+            style={{
+              background:
+                "linear-gradient(180deg, #000 50%, rgba(0, 0, 0, 0.00) 100%)",
+            }}
+          >
+            {/* <Tabs>
+                  <TabPanel>
+                    <h2>Any content 1</h2>
+                  </TabPanel>
+                  <TabPanel>
+                    <h2>Any content 2</h2>
+                  </TabPanel>
+                  <TabList>
+                    <Tab className={"attende-tab"}>Title 1</Tab>
+                    <Tab className={"attende-tab"}>Title 2</Tab>
+                  </TabList>
+                </Tabs> */}
+            <div className="flex items-start justify-center gap-[5.75rem]">
+              <h1 className="text-4xl text-white font-extrabold w-[29.3125rem]">
+                PREVIOUSLY ON{" "}
+                <span className="text-[#B88D38]">
+                  EGFM BELIEVERS’ CONVENTION
+                </span>
+              </h1>
+              <p className="text-base text-[#ffffffcc] font-normal w-[31.875rem] leading-[146%]">
+                9 years and on…
+                <br />
+                <br />
+                Season after season, through the revelation of the divine
+                mysteries, Believers' Convention has become even more beautiful
+                as we have drawn nearer to the things of God’s glory.
+                <br />
+                <br />
+                From the days of{" "}
+                <span className="font-semibold">The Gathering</span> of 2 or 3,
+                till the dawning of{" "}
+                <span className="font-semibold">Who is Like God</span>, the
+                light of the gospel has continued to shine brighter upon every
+                heart that diligently participates.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-4 gap-x-[1.25rem] mt-[4.5rem]">
+              <div className="flex flex-col items-center justify-center gap-[1.25rem]">
+                <img src={gallery1} alt="believers" />
+                <img src={gallery2} alt="believers" />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[1.25rem]">
+                <img src={gallery3} alt="believers" />
+                <img src={gallery4} alt="believers" />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[1.25rem]">
+                <img src={gallery5} alt="believers" />
+                <img src={gallery6} alt="believers" />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[1.25rem]">
+                <img src={gallery7} alt="believers" />
+                <img src={gallery8} alt="believers" />
+              </div>
+            </div>
+            {/* MINISTERS */}
+            <div className="flex items-center justify-center mt-[5.72rem] gap-5">
+              <img
+                src={egfm_logo}
+                alt="egfm logo"
+                className="w-[3.875rem] h-[3.875rem]"
+              />
+              <h1 className="text-4xl text-white font-extrabold">
+                MEET <span className="text-[#F4DBA8]">THE MINISTERS</span>
+              </h1>
+            </div>
+            <div className="grid grid-cols-3 mt-[2.09rem]">
+              <div className="relative text-left">
+                <img src={minister1} alt="a minister" />
+                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
+                  REV. KAYODE OYEGOKE
+                </p>
+                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                  President, Eternal Glorious Fountain Ministeries
+                </p>
+              </div>
+              <div className="relative text-left">
+                <img src={minister1} alt="a minister" />
+                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
+                  REV. KAYODE OYEGOKE
+                </p>
+                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                  President, Eternal Glorious Fountain Ministeries
+                </p>
+              </div>
+              <div className="relative text-left">
+                <img src={minister1} alt="a minister" />
+                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
+                  REV. KAYODE OYEGOKE
+                </p>
+                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                  President, Eternal Glorious Fountain Ministeries
+                </p>
+              </div>
+              <div className="relative text-left">
+                <img src={minister1} alt="a minister" />
+                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
+                  REV. KAYODE OYEGOKE
+                </p>
+                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                  President, Eternal Glorious Fountain Ministeries
+                </p>
+              </div>
+              <div className="relative text-left">
+                <img src={minister1} alt="a minister" />
+                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
+                  REV. KAYODE OYEGOKE
+                </p>
+                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                  President, Eternal Glorious Fountain Ministeries
+                </p>
+              </div>
+              <div className="relative text-left">
+                <img src={minister1} alt="a minister" />
+                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
+                  REV. KAYODE OYEGOKE
+                </p>
+                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                  President, Eternal Glorious Fountain Ministeries
+                </p>
+              </div>
+              <div className="relative text-left">
+                <img src={minister1} alt="a minister" />
+                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
+                  REV. KAYODE OYEGOKE
+                </p>
+                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                  President, Eternal Glorious Fountain Ministeries
+                </p>
+              </div>
+              <div className="relative text-left">
+                <img src={minister1} alt="a minister" />
+                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
+                  REV. KAYODE OYEGOKE
+                </p>
+                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                  President, Eternal Glorious Fountain Ministeries
+                </p>
+              </div>
+              <div className="relative text-left">
+                <img src={minister1} alt="a minister" />
+                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
+                  REV. KAYODE OYEGOKE
+                </p>
+                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                  President, Eternal Glorious Fountain Ministeries
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ */}
+            <div className="mt-[6.94rem]">
+              <h1 className="text-base text-[#B88D38] text-center font-medium leading-[1.9rem] tracking-[.8rem]">
+                FAQS
+              </h1>
+              <h1 className="text-2xl text-center font-extrabold leading-[1.9rem] mt-1">
+                FREQUENTLY ASKED QUESTIONS
+              </h1>
+
+              <Faq />
+            </div>
+          </div>
         </div>
       </div>
     </>
