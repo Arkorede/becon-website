@@ -12,8 +12,11 @@ import gallery6 from "./assets/gallery6.png";
 import gallery7 from "./assets/gallery7.png";
 import gallery8 from "./assets/gallery8.png";
 import minister1 from "./assets/minister1.png";
+import question_mark from "./assets/question_mark.png";
+import arrow_right from "./assets/arrow_right.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Faq from "./Faq";
+import Testimonial from "./Testimonial";
 
 function App() {
   return (
@@ -221,38 +224,38 @@ function App() {
             WHY YOU SHOULD ATTEND BELIEVERS’ CONVENTION?
           </h1>
         </div>
+        {/* TESTIMONIAL */}
         <div className="">
           <Tabs>
             <TabList className={"attend-tab-list"}>
-              <Tab className={"attend-tab"}>Ministers</Tab>
-              <Tab className={"attend-tab"}>Participants</Tab>
+              <Tab
+                className={"attend-tab"}
+                selectedClassName="attend-tabs__tab--selected"
+              >
+                Ministers
+              </Tab>
+              <Tab
+                className={"attend-tab"}
+                selectedClassName="attend-tabs__tab--selected"
+              >
+                Participants
+              </Tab>
             </TabList>
-
-            <TabPanel></TabPanel>
             <TabPanel>
-              <h2>Any content 2</h2>
+              <Testimonial />
+            </TabPanel>
+            <TabPanel>
+              <h2>Any content</h2>
             </TabPanel>
           </Tabs>
 
           <div
-            className="w-full h-[138.375rem] mt-[3.75rem]"
+            className="w-full h-[138.375rem]"
             style={{
               background:
-                "linear-gradient(180deg, #000 50%, rgba(0, 0, 0, 0.00) 100%)",
+                "linear-gradient(180deg, #000 48%, rgba(0, 0, 0, 0.00) 100%)",
             }}
           >
-            {/* <Tabs>
-                  <TabPanel>
-                    <h2>Any content 1</h2>
-                  </TabPanel>
-                  <TabPanel>
-                    <h2>Any content 2</h2>
-                  </TabPanel>
-                  <TabList>
-                    <Tab className={"attende-tab"}>Title 1</Tab>
-                    <Tab className={"attende-tab"}>Title 2</Tab>
-                  </TabList>
-                </Tabs> */}
             <div className="flex items-start justify-center gap-[5.75rem]">
               <h1 className="text-4xl text-white font-extrabold w-[29.3125rem]">
                 PREVIOUSLY ON{" "}
@@ -309,6 +312,13 @@ function App() {
             </div>
             <div className="grid grid-cols-3 mt-[2.09rem]">
               <div className="relative text-left">
+                {/* <p
+                  className="absolute w-full h-[10px]"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #495057 30%, rgb(134, 142, 150)100%)",
+                  }}
+                ></p> */}
                 <img src={minister1} alt="a minister" />
                 <p className="absolute text-base text-white font-extrabold leading-[1.9rem] w-[14.4375rem] bottom-[4.75rem] left-12">
                   REV. KAYODE OYEGOKE
@@ -401,6 +411,63 @@ function App() {
               </h1>
 
               <Faq />
+            </div>
+            {/* ANY QUESTIONS */}
+            <div className="flex items-center justify-center justify-between mt-[9.31rem] px-32">
+              <div className="">
+                <h1 className="text-4xl font-extrabold mb-8 w-72">
+                  ANY <span className="text-[#B88D38]">QUESTIONS?</span>
+                </h1>
+                <a
+                  href="#"
+                  className="bg-black px-[5.5rem] py-4 rounded-lg text-white"
+                >
+                  Talk to us
+                </a>
+              </div>
+              <div className="">
+                <img
+                  src={question_mark}
+                  alt="question mark"
+                  className="w-[21.1875rem]"
+                />
+              </div>
+            </div>
+
+            {/* NEWSLETTER */}
+            <div className="flex flex-col items-center justify-center mt-[12.59rem]">
+              <h1 className="text-base font-medium leading-[1.9rem] tracking-[0.8rem] text-[#B88D38]">
+                OUR NEWSLETTER
+              </h1>
+              <h1 className="text-2xl font-extrabold leading-[1.9rem] mt-1">
+                STAY TUNED FOR BECON’23 UPDATES
+              </h1>
+              <label
+                htmlFor="email-address"
+                className="flex items-end justify-center"
+              >
+                <input
+                  type="email"
+                  className="pl-[2.125rem] pr-[26rem] py-[0.9375rem] mt-8 rounded-lg rounded-r-none border border-[#EEDFC2] bg-[#FFFCF6] outline-none text-base"
+                  placeholder="your email address"
+                />
+                <button className="bg-[#B88D38] px-[1.125rem] py-4 rounded-r-lg">
+                  <img
+                    src={arrow_right}
+                    alt="arrow-right"
+                    className="h-6 w-6"
+                  />
+                </button>
+              </label>
+            </div>
+            {/* FOOTER */}
+            <div className="px-32 mt-[7.91rem]">
+              <div className="border-t py-[2.44rem]">
+                <p className="text-center text-base font-normal leading-normal">
+                  Copyright © 2023 Eternal Glorious Fountain Ministry. All
+                  Rights Reserved
+                </p>
+              </div>
             </div>
           </div>
         </div>

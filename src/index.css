@@ -15,10 +15,7 @@ body {
   font-family: "SF Pro Display", sans-serif;
 }
 
-.react-tabs {
-  -webkit-tap-highlight-color: transparent;
-}
-
+/* MINISTER/PARTICIPANT */
 .attend-tab-list {
   display: flex;
   margin: 0;
@@ -37,11 +34,27 @@ body {
   cursor: pointer;
 }
 
-.react-tabs__tab--selected {
+.attend-tabs__tab--selected {
   outline: none;
   padding: 0.625rem 1.5rem;
   border-radius: 3rem;
   border: 2px solid #b88d38;
+}
+
+/* TESTIMONIAL */
+.testimonial-tab {
+  cursor: pointer;
+}
+
+.testimonial-tabs--selected {
+  outline: none;
+  border: 3px solid #f1c670;
+  border-radius: 0.5rem;
+  color: #757471;
+}
+
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .react-tabs__tab--disabled {
