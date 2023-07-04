@@ -1,4 +1,4 @@
-import testimonial_img from "./assets/testimonial_img.png";
+import testimony_img from "./assets/testimony_img.png";
 import small_testimonial_img from "./assets/small_testimonial_img.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
@@ -87,7 +87,7 @@ const Testimonial = () => {
               </p>
             </div>
             <div className="">
-              <img src={testimonial_img} alt="" />
+              <img src={testimony_img} alt="" />
             </div>
           </div>
         </TabPanel>
@@ -117,7 +117,7 @@ const Testimonial = () => {
               </p>
             </div>
             <div className="">
-              <img src={testimonial_img} alt="" />
+              <img src={testimony_img} alt="" />
             </div>
           </div>
         </TabPanel>
@@ -147,7 +147,7 @@ const Testimonial = () => {
               </p>
             </div>
             <div className="">
-              <img src={testimonial_img} alt="" />
+              <img src={testimony_img} alt="" />
             </div>
           </div>
         </TabPanel>
@@ -177,7 +177,7 @@ const Testimonial = () => {
               </p>
             </div>
             <div className="">
-              <img src={testimonial_img} alt="" />
+              <img src={testimony_img} alt="" />
             </div>
           </div>
         </TabPanel>
