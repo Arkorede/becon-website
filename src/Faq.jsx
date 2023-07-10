@@ -40,12 +40,12 @@ const Faq = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center mt-4">
-      <div className="w-[68.75rem]">
+    <div className="flex items-center justify-center mt-8 px-16 min-[576px]:mt-4 md:px-0">
+      <div className="w-full sm:w-[68.75rem]">
         {data.map((item, i) => (
           <div className="p-4 bg-[#FAFAFA] rounded-lg mb-4">
             <div className="cursor-pointer w-full" onClick={() => toggle(i)}>
-              <h2 className="flex items-center justify-between text-2xl font-semibold leading-[146%]">
+              <h2 className="flex items-center justify-between text-lg font-semibold leading-[146%] sm:text-xl md:text-2xl">
                 {item.question}
                 <span className="font-normal">
                   {selected === i ? "-" : "+"}
@@ -53,7 +53,7 @@ const Faq = () => {
               </h2>
             </div>
             {selected === i ? (
-              <div className="text-base text-[#000000b3] font-normal leading-[146%] mt-2">
+              <div className="text-sm text-[#000000b3] font-normal leading-[146%] mt-2 md:text-base">
                 {item.answer}
               </div>
             ) : null}

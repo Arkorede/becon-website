@@ -1,0 +1,5 @@
+@media only screen and (max-width: 996px) {
+  header {
+    box-shadow: 0px 4px 28px 0px rgba(197, 197, 197, 0.25);
+  }
+}
