@@ -29,7 +29,7 @@ function App() {
   };
 
   return (
-    <div className="">
+    <div className="max-[410px]:w-[410px]">
       {/* HEADER  SECTION */}
       <header className="relative py-4 border border-[red]">
         <nav className="flex items-center justify-center justify-between px-16 md:px-32">
@@ -86,6 +86,7 @@ function App() {
           </p>
           <div className="flex items-center justify-center mt-10 mb-4">
             {/* DAYS */}
+            {/* w-[4.625rem] */}
             <div className="w-[4.625rem] h-[6.25rem] bg-[#FFFDF9]">
               <div
                 className="flex flex-col items-center justify-center bg-[#FFFDF9] w-full rounded h-[5rem] sm:h-[6rem]"
@@ -285,6 +286,7 @@ function App() {
           >
             <div className="h-1 bg-black sm:h-8 md:hidden"></div>
             <div className="flex flex-col items-start justify-center gap-y-2 gap-x-[5.75rem] px-12 min-[490px]:gap-[5.75rem] sm:flex-row md:px-0">
+              <br />
               <h1 className="text-xl text-white font-extrabold w-full mt-3 sm:text-2xl sm:w-[29.3125rem] md:mt-0 md:text-4xl">
                 PREVIOUSLY ON{" "}
                 <span className="text-[#B88D38]">
@@ -457,7 +459,7 @@ function App() {
                 <img
                   src={question_mark}
                   alt="question mark"
-                  className="hidden sm:block"
+                  className="hidden w-[11rem] min-[484px]:w-[13rem] min-[576px]:w-[15rem] sm:block sm:w-[16.5rem] md:w-[21.1875rem]"
                 />
               </div>
               {/* w-[11rem] min-[484px]:w-[13rem] min-[576px]:w-[15rem] sm:w-[16.5rem] md:w-[21.1875rem] */}
