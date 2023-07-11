@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="max-[410px]:w-[410px]">
       {/* HEADER  SECTION */}
-      <header className="relative py-4 border border-[red]">
+      <header className="relative py-4">
         <nav className="flex items-center justify-center justify-between px-16 md:px-32">
           <div className="flex items-center justify-center gap-4">
             <img
