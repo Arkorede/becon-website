@@ -40,8 +40,8 @@ const Faq = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center mt-8 px-16 min-[576px]:mt-4 md:px-0">
-      <div className="w-full sm:w-[68.75rem]">
+    <div className="flex items-center justify-center mt-8 px-10 min-[480px]:px-12 min-[576px]:mt-4 sm:px-16">
+      <div className="w-full">
         {data.map((item, i) => (
           <div className="p-4 bg-[#FAFAFA] rounded-lg mb-4">
             <div className="cursor-pointer w-full" onClick={() => toggle(i)}>

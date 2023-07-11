@@ -29,9 +29,9 @@ function App() {
   };
 
   return (
-    <div className="max-[410px]:w-[410px]">
+    <div className="max-[412px]:w-[412px]">
       {/* HEADER  SECTION */}
-      <header className="relative py-4">
+      <header className="relative py-4 border border-[red]">
         <nav className="flex items-center justify-center justify-between px-16 md:px-32">
           <div className="flex items-center justify-center gap-4">
             <img
@@ -243,8 +243,8 @@ function App() {
 
       {/* WHY YOU SHOULD ATTEND */}
       <div className="mt-[6.88rem] md:mt-[11.88rem]">
-        <div className="flex items-center justify-center">
-          <h1 className="text-[21px] text-center font-extrabold leading-[1.6rem] w-full sm:w-[25.375rem] sm:leading-[1.9rem] sm:text-2xl">
+        <div className="flex items-center justify-center p-2">
+          <h1 className="text-lg text-center font-extrabold leading-[1.6rem] w-full min-[480px]:text-[21px] sm:w-[25.375rem] sm:leading-[1.9rem] sm:text-2xl">
             WHY YOU SHOULD ATTEND BELIEVERS’ CONVENTION?
           </h1>
         </div>
@@ -350,82 +350,82 @@ function App() {
                   }}
                 ></p> */}
                 <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[3.75rem] md:left-12 md:text-base md:leading-[1.9rem]">
+                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
                   REV. KAYODE OYEGOKE
                 </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 md:left-12 md:text-sm md:leading-[146%] md:bottom-12">
+                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
                   President, Eternal Glorious Fountain Ministeries
                 </p>
               </div>
               <div className="relative text-left">
                 <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] bottom-[4.75rem] left-12 md:text-base md:leading-[1.9rem]">
+                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
                   REV. KAYODE OYEGOKE
                 </p>
-                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
                   President, Eternal Glorious Fountain Ministeries
                 </p>
               </div>
               <div className="relative text-left">
                 <img src={minister1} alt="a minister" />
-                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] bottom-[4.75rem] left-12">
+                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
                   REV. KAYODE OYEGOKE
                 </p>
-                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
                   President, Eternal Glorious Fountain Ministeries
                 </p>
               </div>
               <div className="relative text-left">
                 <img src={minister1} alt="a minister" />
-                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] bottom-[4.75rem] left-12">
+                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
                   REV. KAYODE OYEGOKE
                 </p>
-                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
                   President, Eternal Glorious Fountain Ministeries
                 </p>
               </div>
               <div className="relative text-left">
                 <img src={minister1} alt="a minister" />
-                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] bottom-[4.75rem] left-12">
+                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
                   REV. KAYODE OYEGOKE
                 </p>
-                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
                   President, Eternal Glorious Fountain Ministeries
                 </p>
               </div>
               <div className="relative text-left">
                 <img src={minister1} alt="a minister" />
-                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] bottom-[4.75rem] md:left-12">
+                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
                   REV. KAYODE OYEGOKE
                 </p>
-                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 md:left-12">
+                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
                   President, Eternal Glorious Fountain Ministeries
                 </p>
               </div>
               <div className="relative text-left">
                 <img src={minister1} alt="a minister" />
-                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] bottom-[4.75rem] left-12">
+                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
                   REV. KAYODE OYEGOKE
                 </p>
-                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
                   President, Eternal Glorious Fountain Ministeries
                 </p>
               </div>
               <div className="relative text-left">
                 <img src={minister1} alt="a minister" />
-                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] bottom-[4.75rem] left-12">
+                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
                   REV. KAYODE OYEGOKE
                 </p>
-                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
                   President, Eternal Glorious Fountain Ministeries
                 </p>
               </div>
               <div className="hidden relative text-left sm:block">
                 <img src={minister1} alt="a minister" />
-                <p className="absolute text-base text-white font-extrabold leading-[1.9rem] bottom-[4.75rem] left-12">
+                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
                   REV. KAYODE OYEGOKE
                 </p>
-                <p className="absolute text-sm text-[#ffffffcc] font-normal leading-[146%] bottom-12 left-12">
+                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
                   President, Eternal Glorious Fountain Ministeries
                 </p>
               </div>
@@ -479,7 +479,7 @@ function App() {
               >
                 <input
                   type="email"
-                  className="pl-[2.125rem] pr-[10.2rem] py-[0.8rem] mt-8 rounded-lg rounded-r-none border border-[#EEDFC2] bg-[#FFFCF6] outline-none text-base min-[521px]:py-[0.9375rem] min-[521px]:pr-[14.2rem] min-[576px]:pr-[17.6rem] sm:pr-[22rem] md:pr-[26rem]"
+                  className="pl-[2.125rem] pr-[6.2rem] py-[0.8rem] mt-8 rounded-lg rounded-r-none border border-[#EEDFC2] bg-[#FFFCF6] outline-none text-base min-[521px]:py-[0.9375rem] min-[440px]:pr-[8.2rem] min-[484px]:pr-[10.2rem] min-[521px]:pr-[14.2rem] min-[576px]:pr-[17.6rem] sm:pr-[22rem] md:pr-[26rem]"
                   placeholder="your email address"
                 />
                 <button className="bg-[#B88D38] px-[1.125rem] py-[13px] rounded-r-lg min-[521px]:py-4">
@@ -492,8 +492,9 @@ function App() {
               </label>
             </div>
             {/* FOOTER */}
-            <div className="px-32 mt-[7.91rem]">
+            <div className="px-20 min-[490px]:px-32 mt-[7.91rem]">
               <div className="border-t py-[2.44rem]">
+                {/* min-[422px]:text-[15px]  */}
                 <p className="text-center text-[15px] font-normal leading-normal min-[576px]:text-base">
                   Copyright © 2023 Eternal Glorious Fountain Ministry. All
                   Rights Reserved

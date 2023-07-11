@@ -53,7 +53,7 @@ const Testimonial = () => {
           <div className="flex flex-col-reverse items-start justify-center gap-y-12 lg:gap-5 md:flex-row">
             <div className="px-12 mt-[2.6rem] md:px-0 lg:mt-[3rem]">
               <h1 className="text-xl text-white font-normal leading-[146%] mt-8 sm:text-2xl">
-                Pst. Thompson Ehima's Testimony
+                Pst. Moses Omokhafe's Testimony
               </h1>
               <p className="text-sm text-[#ffffffcc] font-normal leading-[136%] mt-2 lg:text-base lg:leading-[146%]">
                 Men and women gather from all over the world for a great
@@ -87,7 +87,7 @@ const Testimonial = () => {
           <div className="flex flex-col-reverse items-start justify-center gap-y-12 lg:gap-5 md:flex-row">
             <div className="px-12 mt-[2.6rem] md:px-0 lg:mt-[3rem]">
               <h1 className="text-xl text-white font-normal leading-[146%] mt-8 sm:text-2xl">
-                Pst. Thompson Ehima's Testimony
+                Pst. Tayo Fasan's Testimony
               </h1>
               <p className="text-sm text-[#ffffffcc] font-normal leading-[136%] mt-2 lg:text-base lg:leading-[146%]">
                 Men and women gather from all over the world for a great
@@ -121,7 +121,7 @@ const Testimonial = () => {
           <div className="flex flex-col-reverse items-start justify-center gap-y-12 lg:gap-5 md:flex-row">
             <div className="px-12 mt-[2.6rem] md:px-0 lg:mt-[3rem]">
               <h1 className="text-xl text-white font-normal leading-[146%] mt-8 sm:text-2xl">
-                Pst. Thompson Ehima's Testimony
+                Pst. Emeka Egwuchukwu's Testimony
               </h1>
               <p className="text-sm text-[#ffffffcc] font-normal leading-[136%] mt-2 lg:text-base lg:leading-[146%]">
                 Men and women gather from all over the world for a great
