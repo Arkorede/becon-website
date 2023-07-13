@@ -57,7 +57,7 @@ body {
 }
 
 .react-tabs__tab--disabled {
-  color: GrayText;
+  color: #000;
   cursor: default;
 }
 

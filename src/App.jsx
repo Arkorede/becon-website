@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import egfm_logo from "./assets/egfm_logo.png";
 import arrow_down from "./assets/arrow_down.png";
 import hero_img from "./assets/hero_img.png";
@@ -17,7 +17,7 @@ import arrow_right from "./assets/arrow_right.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Faq from "./Faq";
-import Testimonial from "./Testimonial";
+import Testimony from "./Testimony";
 import "./App.css";
 import HiddenMenu from "./HiddenMenu";
 
@@ -27,6 +27,49 @@ function App() {
   const clicked = () => {
     setShowMenu(true);
   };
+
+  const [timerDays, setTimerDays] = useState("00");
+  const [timerHours, setTimerHours] = useState("00");
+  const [timerMinutes, setTimerMinutes] = useState("00");
+  const [timerSeconds, setTimerSeconds] = useState("00");
+
+  let interval = useRef();
+
+  const startTimer = () => {
+    const countdownDate = new Date("August 6, 2023 00:00:00").getTime();
+
+    interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if (distance < 0) {
+        // stop our timer
+        clearInterval(interval.current);
+      } else {
+        // update Timer
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+        setTimerSeconds(seconds);
+      }
+    }, 1000);
+  };
+
+  useEffect(() => {
+    let intervalRef = interval.current;
+
+    startTimer();
+    return () => {
+      clearInterval(intervalRef);
+    };
+  });
 
   return (
     <div className="max-[412px]:w-[412px]">
@@ -86,7 +129,6 @@ function App() {
           </p>
           <div className="flex items-center justify-center mt-10 mb-4">
             {/* DAYS */}
-            {/* w-[4.625rem] */}
             <div className="w-[4.625rem] h-[6.25rem] bg-[#FFFDF9]">
               <div
                 className="flex flex-col items-center justify-center bg-[#FFFDF9] w-full rounded h-[5rem] sm:h-[6rem]"
@@ -94,7 +136,7 @@ function App() {
                   boxShadow: "-1px -1px 17px 0px rgba(235,220,192,0.81)",
                 }}
               >
-                <p className="text-3xl font-extrabold">45</p>
+                <p className="text-3xl font-extrabold">{timerDays}</p>
                 <p className="text-[0.625rem] text-[#A1957D] tracking-[0.13125rem] font-semibold">
                   DAYS
                 </p>
@@ -113,7 +155,7 @@ function App() {
                   boxShadow: "-1px -1px 17px 0px rgba(235,220,192,0.81)",
                 }}
               >
-                <p className="text-3xl font-extrabold">22</p>
+                <p className="text-3xl font-extrabold">{timerHours}</p>
                 <p className="text-[0.625rem] text-[#A1957D] tracking-[0.13125rem] font-semibold">
                   HOURS
                 </p>
@@ -132,7 +174,7 @@ function App() {
                   boxShadow: "-1px -1px 17px 0px rgba(235,220,192,0.81)",
                 }}
               >
-                <p className="text-3xl font-extrabold">34</p>
+                <p className="text-3xl font-extrabold">{timerMinutes}</p>
                 <p className="text-[0.625rem] text-[#A1957D] tracking-[0.13125rem] font-semibold">
                   MIN
                 </p>
@@ -151,7 +193,7 @@ function App() {
                   boxShadow: "-1px -1px 17px 0px rgba(235,220,192,0.81)",
                 }}
               >
-                <p className="text-3xl font-extrabold">12</p>
+                <p className="text-3xl font-extrabold">{timerSeconds}</p>
                 <p className="text-[0.625rem] text-[#A1957D] tracking-[0.13125rem] font-semibold">
                   SEC
                 </p>
@@ -243,7 +285,7 @@ function App() {
 
       {/* WHY YOU SHOULD ATTEND */}
       <div className="mt-[6.88rem] md:mt-[11.88rem]">
-        <div className="flex items-center justify-center p-2">
+        <div className="flex items-center justify-center p-2 min-[480px]:p-0">
           <h1 className="text-lg text-center font-extrabold leading-[1.6rem] w-full min-[480px]:text-[21px] sm:w-[25.375rem] sm:leading-[1.9rem] sm:text-2xl">
             WHY YOU SHOULD ATTEND BELIEVERS’ CONVENTION?
           </h1>
@@ -263,6 +305,7 @@ function App() {
               <Tab
                 className={"attend-tab"}
                 selectedClassName="attend-tabs__tab--selected"
+                disabled
               >
                 <p className="text-sm text-center min-[576px]:text-base">
                   Participants
@@ -270,7 +313,7 @@ function App() {
               </Tab>
             </TabList>
             <TabPanel>
-              <Testimonial />
+              <Testimony />
             </TabPanel>
             <TabPanel>
               <h2>Any content</h2>
@@ -284,16 +327,14 @@ function App() {
                 "linear-gradient(180deg, #000 48%, rgba(0, 0, 0, 0.00) 100%)",
             }}
           >
-            <div className="h-1 bg-black sm:h-8 md:hidden"></div>
-            <div className="flex flex-col items-start justify-center gap-y-2 gap-x-[5.75rem] px-12 min-[490px]:gap-[5.75rem] sm:flex-row md:px-0">
-              <br />
+            <div className="flex flex-col items-start justify-center justify-between pt-[76px] pl-12 pr-[114px] sm:gap-[5.75rem] sm:flex-row md:pl-24 lg:pl-32 xl:pr-[126px]">
               <h1 className="text-xl text-white font-extrabold w-full mt-3 sm:text-2xl sm:w-[29.3125rem] md:mt-0 md:text-4xl">
                 PREVIOUSLY ON{" "}
                 <span className="text-[#B88D38]">
                   EGFM BELIEVERS’ CONVENTION
                 </span>
               </h1>
-              <p className="text-sm text-[#ffffffcc] font-normal w-full mt-3 leading-[146%] sm:w-[31.875rem] md:mt-0 md:text-base">
+              <p className="text-sm text-[#ffffffcc] font-normal w-full leading-[146%] mt-5 sm:mt-0 sm:w-[31.875rem] md:mt-0 md:text-base">
                 9 years and on…
                 <br />
                 <br />
@@ -462,7 +503,6 @@ function App() {
                   className="hidden w-[11rem] min-[484px]:w-[13rem] min-[576px]:w-[15rem] sm:block sm:w-[16.5rem] md:w-[21.1875rem]"
                 />
               </div>
-              {/* w-[11rem] min-[484px]:w-[13rem] min-[576px]:w-[15rem] sm:w-[16.5rem] md:w-[21.1875rem] */}
             </div>
 
             {/* NEWSLETTER */}
@@ -494,7 +534,6 @@ function App() {
             {/* FOOTER */}
             <div className="px-20 min-[490px]:px-32 mt-[7.91rem]">
               <div className="border-t py-[2.44rem]">
-                {/* min-[422px]:text-[15px]  */}
                 <p className="text-center text-[15px] font-normal leading-normal min-[576px]:text-base">
                   Copyright © 2023 Eternal Glorious Fountain Ministry. All
                   Rights Reserved
