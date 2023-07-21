@@ -10,7 +10,7 @@ const Testimonial = () => {
           <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
             <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
               <h1 className="text-[20px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
-                Pst. Emeka Egwuchukwu's Testimony
+                Pst. Emeka Egwuchukwu&apos;s Testimony
               </h1>
               <p className="text-sm text-[#ffffffcc] font-normal leading-[126%] min-[768px]:leading-[120%] mt-2 min-[768px]:text-[10.5px] min-[912px]:leading-[108%] min-[795px]:text-[11px] min-[912px]:text-xs min-[972px]:leading-[99%] min-[972px]:text-[13px] md:text-[13px] min-[1034px]:leading-[108%] min-[1070px]:leading-[140%] min-[1090px]:leading-[126%] min-[1090px]:text-sm lg:text-base min-[1138px]:text-[15px] min-[1138px]:leading-[132%] lg:leading-[132%] min-[1246px]:leading-[132%]">
                 Men and women gather from all over the world for a great
@@ -31,7 +31,7 @@ const Testimonial = () => {
                 Lord and the brethren.
               </p>
             </div>
-            <div className="max-w-full px-4 pt-4 min-[768px]:p-0">
+            <div className="testimony_img_container max-w-full px-4 pt-4 min-[768px]:p-0">
               <img src={testimony_img} alt="" className="w-full h-auto" />
             </div>
           </div>
@@ -40,7 +40,7 @@ const Testimonial = () => {
           <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
             <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
               <h1 className="text-[22px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
-                Pst. Thompson Ehima's Testimony
+                Pst. Thompson Ehima&apos;s Testimony
               </h1>
               <p className="text-sm text-[#ffffffcc] font-normal leading-[126%] min-[768px]:leading-[120%] mt-2 min-[768px]:text-[10.5px] min-[912px]:leading-[108%] min-[795px]:text-[11px] min-[912px]:text-xs min-[972px]:leading-[99%] min-[972px]:text-[13px] md:text-[13px] min-[1034px]:leading-[108%] min-[1070px]:leading-[140%] min-[1090px]:leading-[126%] min-[1090px]:text-sm lg:text-base min-[1138px]:text-[15px] min-[1138px]:leading-[132%] lg:leading-[132%] min-[1246px]:leading-[132%]">
                 Men and women gather from all over the world for a great
@@ -61,7 +61,7 @@ const Testimonial = () => {
                 Lord and the brethren.
               </p>
             </div>
-            <div className="max-w-full px-4 pt-4 min-[768px]:p-0">
+            <div className="testimony_img_container max-w-full px-4 pt-4 min-[768px]:p-0">
               <img src={testimony_img} alt="" className="w-full h-auto" />
             </div>
           </div>
@@ -70,7 +70,7 @@ const Testimonial = () => {
           <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
             <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
               <h1 className="text-[22px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
-                Pst. Tayo Fasan's Testimony
+                Pst. Tayo Fasan&apos;s Testimony
               </h1>
               <p className="text-sm text-[#ffffffcc] font-normal leading-[126%] min-[768px]:leading-[120%] mt-2 min-[768px]:text-[10.5px] min-[912px]:leading-[108%] min-[795px]:text-[11px] min-[912px]:text-xs min-[972px]:leading-[99%] min-[972px]:text-[13px] md:text-[13px] min-[1034px]:leading-[108%] min-[1070px]:leading-[140%] min-[1090px]:leading-[126%] min-[1090px]:text-sm lg:text-base min-[1138px]:text-[15px] min-[1138px]:leading-[132%] lg:leading-[132%] min-[1246px]:leading-[132%]">
                 Men and women gather from all over the world for a great
@@ -91,7 +91,7 @@ const Testimonial = () => {
                 Lord and the brethren.
               </p>
             </div>
-            <div className="max-w-full px-4 pt-4 min-[768px]:p-0">
+            <div className="testimony_img_container max-w-full px-4 pt-4 min-[768px]:p-0">
               <img src={testimony_img} alt="" className="w-full h-auto" />
             </div>
           </div>
@@ -100,7 +100,7 @@ const Testimonial = () => {
           <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
             <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
               <h1 className="text-[22px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
-                Pst. Moses Omokhafe's Testimony
+                Pst. Moses Omokhafe&apos;s Testimony
               </h1>
               <p className="text-sm text-[#ffffffcc] font-normal leading-[126%] min-[768px]:leading-[120%] mt-2 min-[768px]:text-[10.5px] min-[912px]:leading-[108%] min-[795px]:text-[11px] min-[912px]:text-xs min-[972px]:leading-[99%] min-[972px]:text-[13px] md:text-[13px] min-[1034px]:leading-[108%] min-[1070px]:leading-[140%] min-[1090px]:leading-[126%] min-[1090px]:text-sm lg:text-base min-[1138px]:text-[15px] min-[1138px]:leading-[132%] lg:leading-[132%] min-[1246px]:leading-[132%]">
                 Men and women gather from all over the world for a great
@@ -121,7 +121,7 @@ const Testimonial = () => {
                 Lord and the brethren.
               </p>
             </div>
-            <div className="max-w-full px-4 pt-4 min-[768px]:p-0">
+            <div className="testimony_img_container max-w-full px-4 pt-4 min-[768px]:p-0">
               <img src={testimony_img} alt="" className="w-full h-auto" />
             </div>
           </div>

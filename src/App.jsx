@@ -1,288 +1,25 @@
-import { useEffect, useRef, useState } from "react";
-import egfm_logo from "./assets/egfm_logo.png";
-import arrow_down from "./assets/arrow_down.png";
-import hero_img from "./assets/hero_img.png";
-import about_img from "./assets/about_img.png";
-import gallery1 from "./assets/gallery1.png";
-import gallery2 from "./assets/gallery2.png";
-import gallery3 from "./assets/gallery3.png";
-import gallery4 from "./assets/gallery4.png";
-import gallery5 from "./assets/gallery5.png";
-import gallery6 from "./assets/gallery6.png";
-import gallery7 from "./assets/gallery7.png";
-import gallery8 from "./assets/gallery8.png";
-import minister1 from "./assets/minister1.png";
 import question_mark from "./assets/question_mark.png";
 import arrow_right from "./assets/arrow_right.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { FaBars, FaTimes } from "react-icons/fa";
+import Header from "./Header";
+import Hero from "./Hero";
+import About from "./About";
+import Gallery from "./Gallery";
+import Ministers from "./Ministers";
 import Faq from "./Faq";
 import Testimony from "./Testimony";
 import "./App.css";
-import HiddenMenu from "./HiddenMenu";
+// import Try from "./Try";
 
 function App() {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const clicked = () => {
-    setShowMenu(true);
-  };
-
-  const [timerDays, setTimerDays] = useState("00");
-  const [timerHours, setTimerHours] = useState("00");
-  const [timerMinutes, setTimerMinutes] = useState("00");
-  const [timerSeconds, setTimerSeconds] = useState("00");
-
-  let interval = useRef();
-
-  const startTimer = () => {
-    const countdownDate = new Date("August 6, 2023 00:00:00").getTime();
-
-    interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        // stop our timer
-        clearInterval(interval.current);
-      } else {
-        // update Timer
-        setTimerDays(days);
-        setTimerHours(hours);
-        setTimerMinutes(minutes);
-        setTimerSeconds(seconds);
-      }
-    }, 1000);
-  };
-
-  useEffect(() => {
-    let intervalRef = interval.current;
-
-    startTimer();
-    return () => {
-      clearInterval(intervalRef);
-    };
-  });
-
   return (
+    // <div className="">
+    //   <Try />
+    // </div>
     <div className="max-[412px]:w-[412px]">
-      {/* HEADER  SECTION */}
-      <header className="relative py-4">
-        <nav className="flex items-center justify-center justify-between px-16 md:px-32">
-          <div className="flex items-center justify-center gap-4">
-            <img
-              src={egfm_logo}
-              alt="egfm logo"
-              className="w-[3.1875rem] h-[3.1875rem]"
-            />
-            <div className="flex items-center justify-center gap-2">
-              <p className="hidden font-normal text-sm md:block">About EGFM</p>
-              <p className="hidden font-normal text-sm md:block">FAQ</p>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-8">
-            <div className="flex items-center justify-center gap-4">
-              <p className="hidden font-medium text-sm md:block">
-                Follow BECON online
-              </p>
-              <img
-                src={arrow_down}
-                alt="arrow down"
-                className="hidden w-[0.99rem] h-[0.44363rem] md:block"
-              />
-            </div>
-            <a
-              href="#"
-              className="hidden bg-black text-white font-normal text-sm px-8 py-3 rounded-lg md:block"
-            >
-              Register now
-            </a>
-          </div>
-          <button className="block md:hidden" onClick={clicked}>
-            <FaBars />
-          </button>
-        </nav>
-        {showMenu && (
-          <div className="absolute top-[-46px] w-full">
-            <HiddenMenu setShowMenu={setShowMenu} />
-          </div>
-        )}
-      </header>
-
-      {/* HERO SECTION */}
-      <div className="mt-12 flex flex-col items-center justify-center gap-[7.5rem] md:flex-row md:px-32">
-        <div className="flex flex-col items-center justify-center md:block">
-          <h1 className="font-[1000] w-56 text-center text-4xl md:text-6xl md:text-left xl:text-5xl">
-            BECON23 IS HERE
-          </h1>
-          <p className="text-[#000000b3] text-sm uppercase tracking-[0.25rem] mt-1.5 sm:mt-0">
-            A <span className="text-[#B88D38] italic">7-day </span>{" "}
-            life-changing event
-          </p>
-          <div className="flex items-center justify-center mt-10 mb-4">
-            {/* DAYS */}
-            <div className="w-[4.625rem] h-[6.25rem] bg-[#FFFDF9]">
-              <div
-                className="flex flex-col items-center justify-center bg-[#FFFDF9] w-full rounded h-[5rem] sm:h-[6rem]"
-                style={{
-                  boxShadow: "-1px -1px 17px 0px rgba(235,220,192,0.81)",
-                }}
-              >
-                <p className="text-3xl font-extrabold">{timerDays}</p>
-                <p className="text-[0.625rem] text-[#A1957D] tracking-[0.13125rem] font-semibold">
-                  DAYS
-                </p>
-              </div>
-              <span className="block bg-[#EBDCC0] h-[12px] rounded-b"></span>
-            </div>
-            <div className="mx-[0.44rem]">
-              <p className="w-[0.375rem] h-[0.375rem] bg-[#EBDCC0] rounded-md mb-1.5"></p>
-              <p className="w-[0.375rem] h-[0.375rem] bg-[#EBDCC0] rounded-md"></p>
-            </div>
-            {/* HOURS */}
-            <div className="w-[4.625rem] h-[6.25rem] bg-[#FFFDF9]">
-              <div
-                className="flex flex-col items-center justify-center bg-[#FFFDF9] w-full rounded h-[5rem] sm:h-[6rem]"
-                style={{
-                  boxShadow: "-1px -1px 17px 0px rgba(235,220,192,0.81)",
-                }}
-              >
-                <p className="text-3xl font-extrabold">{timerHours}</p>
-                <p className="text-[0.625rem] text-[#A1957D] tracking-[0.13125rem] font-semibold">
-                  HOURS
-                </p>
-              </div>
-              <span className="block bg-[#EBDCC0] h-[12px] rounded-b"></span>
-            </div>
-            <div className="mx-[0.44rem]">
-              <p className="w-[0.375rem] h-[0.375rem] bg-[#EBDCC0] rounded-md mb-1.5"></p>
-              <p className="w-[0.375rem] h-[0.375rem] bg-[#EBDCC0] rounded-md"></p>
-            </div>
-            {/* MINUTES */}
-            <div className="w-[4.625rem] h-[6.25rem] bg-[#FFFDF9]">
-              <div
-                className="flex flex-col items-center justify-center bg-[#FFFDF9] w-full rounded h-[5rem] sm:h-[6rem]"
-                style={{
-                  boxShadow: "-1px -1px 17px 0px rgba(235,220,192,0.81)",
-                }}
-              >
-                <p className="text-3xl font-extrabold">{timerMinutes}</p>
-                <p className="text-[0.625rem] text-[#A1957D] tracking-[0.13125rem] font-semibold">
-                  MIN
-                </p>
-              </div>
-              <span className="block bg-[#EBDCC0] h-[12px] rounded-b"></span>
-            </div>
-            <div className="mx-[0.44rem]">
-              <p className="w-[0.375rem] h-[0.375rem] bg-[#EBDCC0] rounded-md mb-1.5"></p>
-              <p className="w-[0.375rem] h-[0.375rem] bg-[#EBDCC0] rounded-md"></p>
-            </div>
-            {/* SECONDS */}
-            <div className="w-[4.625rem] h-[6.25rem] bg-[#FFFDF9]">
-              <div
-                className="flex flex-col items-center justify-center bg-[#FFFDF9] w-full rounded h-[5rem] sm:h-[6rem]"
-                style={{
-                  boxShadow: "-1px -1px 17px 0px rgba(235,220,192,0.81)",
-                }}
-              >
-                <p className="text-3xl font-extrabold">{timerSeconds}</p>
-                <p className="text-[0.625rem] text-[#A1957D] tracking-[0.13125rem] font-semibold">
-                  SEC
-                </p>
-              </div>
-              <span className="block bg-[#EBDCC0] h-[12px] rounded-b"></span>
-            </div>
-          </div>
-          <p className="mt-4 text-[#000] font-normal text-base tracking-[.2rem] mb-8">
-            AUGUST 6TH - 12TH, 2023
-          </p>
-          <a
-            href="#"
-            className="inline-block bg-black text-white font-normal text-sm px-8 py-3 rounded-lg"
-          >
-            Register now
-          </a>
-        </div>
-
-        {/* HERO IMAGE */}
-        <div className="">
-          <div className="max-w-full">
-            <img
-              src={hero_img}
-              alt="a group of believers"
-              className="w-full h-auto sm:w-[33.6765rem] "
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* ABOUT SECTION */}
-      <div className="px-16 mt-[7.69rem] sm:px-32">
-        <div className="flex flex-col items-center justify-center justify-between md:flex-row">
-          <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
-            ABOUT{" "}
-            <span className="text-[#B88D38]">EGFM BELIEVERS’ CONVENTION</span>
-          </h1>
-          <p className="text-sm font-normal text-[#46371bb3] mt-6 md:mt-0 lg:text-base">
-            BeCon is a 7-day camp meeting that takes place in August every year.
-            In times like this, it remains a spiritual platform for teaching the
-            gospel of Christ and the Son of God.
-            <br />
-            <br />
-            Through this platform, seasoned ministers of the New Testament bring
-            the gospel of salvation via various ministrations that prepare and
-            furnish the hearts of saints to inherit eternal life ultimately.
-          </p>
-        </div>
-
-        <div className="mt-[4.94rem] flex flex-col items-center justify-center gap-[4.625rem] md:flex-row">
-          <div className="flex items-start gap-[1.9375rem]">
-            <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
-            <div className="md:w-[20.125rem]">
-              <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
-                BECON FOR EVERYONE
-              </h1>
-              <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-              </p>
-              <br />
-              <span className="block font-normal text-sm sm:text-[15px] md:text-base">
-                BECON FOR EVERYONE HOLDS:
-              </span>
-              <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
-                AUG 6TH - 12TH, 2023
-              </span>
-              <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
-                <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
-                  Add to calendar
-                </p>
-                <div className="flex items-center justify-center text-[#B88D38]">
-                  <ion-icon name="calendar-outline"></ion-icon>
-                </div>
-              </button>
-            </div>
-          </div>
-          <div className="max-w-full">
-            <img
-              src={about_img}
-              alt="a group of believers"
-              className="w-full h-auto sm:w-[33.6875rem]"
-            />
-          </div>
-        </div>
-      </div>
-
+      <Header />
+      <Hero />
+      <About />
       {/* WHY YOU SHOULD ATTEND */}
       <div className="mt-[6.88rem] md:mt-[11.88rem]">
         <div className="flex items-center justify-center p-2 min-[480px]:p-0">
@@ -328,19 +65,19 @@ function App() {
             }}
           >
             <div className="flex flex-col items-start justify-center justify-between pt-[76px] pl-12 pr-[114px] sm:gap-[5.75rem] sm:flex-row md:pl-24 lg:pl-32 xl:pr-[126px]">
-              <h1 className="text-xl text-white font-extrabold w-full mt-3 sm:text-2xl sm:w-[29.3125rem] md:mt-0 md:text-4xl">
+              <h1 className="text-xl text-white font-extrabold w-full mt-3 sm:text-2xl sm:w-[29.3125rem] sm:mt-0 md:text-4xl">
                 PREVIOUSLY ON{" "}
                 <span className="text-[#B88D38]">
                   EGFM BELIEVERS’ CONVENTION
                 </span>
               </h1>
-              <p className="text-sm text-[#ffffffcc] font-normal w-full leading-[146%] mt-5 sm:mt-0 sm:w-[31.875rem] md:mt-0 md:text-base">
+              <p className="text-sm text-[#ffffffcc] font-normal w-full leading-[146%] mt-3 sm:w-[31.875rem] sm:mt-0 md:text-base">
                 9 years and on…
                 <br />
                 <br />
                 Season after season, through the revelation of the divine
-                mysteries, Believers' Convention has become even more beautiful
-                as we have drawn nearer to the things of God’s glory.
+                mysteries, Believers&apos; Convention has become even more
+                beautiful as we have drawn nearer to the things of God’s glory.
                 <br />
                 <br />
                 From the days of{" "}
@@ -352,125 +89,8 @@ function App() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-2 mt-[4.5rem] sm:gap-3 sm:grid-cols-4 md:gap-x-[1.25rem]">
-              <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-[1.25rem]">
-                <img src={gallery1} alt="believers" />
-                <img src={gallery2} alt="believers" />
-              </div>
-              <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-[1.25rem]">
-                <img src={gallery3} alt="believers" />
-                <img src={gallery4} alt="believers" />
-              </div>
-              <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-[1.25rem]">
-                <img src={gallery5} alt="believers" />
-                <img src={gallery6} alt="believers" />
-              </div>
-              <div className="flex flex-col items-center justify-center hidden gap-2 sm:block sm:gap-3 md:gap-[1.25rem]">
-                <img src={gallery7} alt="believers" />
-                <img src={gallery8} alt="believers" />
-              </div>
-            </div>
-            {/* MINISTERS */}
-            <div className="flex items-center justify-center mt-[5.72rem] gap-5">
-              <img
-                src={egfm_logo}
-                alt="egfm logo"
-                className="w-[3.2rem] h-[3.2rem] sm:w-[3.5rem] sm:h-[3.5rem] md:w-[3.875rem] md:h-[3.875rem]"
-              />
-              <h1 className="text-2xl text-white font-extrabold md:text-4xl">
-                MEET <span className="text-[#F4DBA8]">THE MINISTERS</span>
-              </h1>
-            </div>
-            <div className="grid grid-cols-2 mt-[2.09rem] sm:grid-cols-3">
-              <div className="relative text-left">
-                {/* <p
-                  className="absolute w-full h-[10px]"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, #495057 30%, rgb(134, 142, 150)100%)",
-                  }}
-                ></p> */}
-                <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
-                  REV. KAYODE OYEGOKE
-                </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
-                  President, Eternal Glorious Fountain Ministeries
-                </p>
-              </div>
-              <div className="relative text-left">
-                <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
-                  REV. KAYODE OYEGOKE
-                </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
-                  President, Eternal Glorious Fountain Ministeries
-                </p>
-              </div>
-              <div className="relative text-left">
-                <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
-                  REV. KAYODE OYEGOKE
-                </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
-                  President, Eternal Glorious Fountain Ministeries
-                </p>
-              </div>
-              <div className="relative text-left">
-                <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
-                  REV. KAYODE OYEGOKE
-                </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
-                  President, Eternal Glorious Fountain Ministeries
-                </p>
-              </div>
-              <div className="relative text-left">
-                <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
-                  REV. KAYODE OYEGOKE
-                </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
-                  President, Eternal Glorious Fountain Ministeries
-                </p>
-              </div>
-              <div className="relative text-left">
-                <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
-                  REV. KAYODE OYEGOKE
-                </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
-                  President, Eternal Glorious Fountain Ministeries
-                </p>
-              </div>
-              <div className="relative text-left">
-                <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
-                  REV. KAYODE OYEGOKE
-                </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
-                  President, Eternal Glorious Fountain Ministeries
-                </p>
-              </div>
-              <div className="relative text-left">
-                <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
-                  REV. KAYODE OYEGOKE
-                </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
-                  President, Eternal Glorious Fountain Ministeries
-                </p>
-              </div>
-              <div className="hidden relative text-left sm:block">
-                <img src={minister1} alt="a minister" />
-                <p className="absolute text-[15px] text-white font-extrabold leading-[1.2rem] left-6 bottom-[3rem] min-[521px]:mb-3.5 min-[556px]:mb-0 min-[521px]:bottom-[2.1rem] min-[576px]:bottom-[3rem] sm:bottom-[4rem] md:left-10 md:text-base md:leading-[1.9rem]">
-                  REV. KAYODE OYEGOKE
-                </p>
-                <p className="absolute text-[13px] text-[#ffffffcc] font-normal leading-[126%] left-6 bottom-3 min-[576px]:bottom-6 sm:bottom-7 min-[832px]:bottom-10 md:left-10 md:text-sm md:leading-[146%] md:bottom-12">
-                  President, Eternal Glorious Fountain Ministeries
-                </p>
-              </div>
-            </div>
+            <Gallery />
+            <Ministers />
 
             {/* FAQ */}
             <div className="mt-[6.94rem]">
@@ -491,7 +111,7 @@ function App() {
                 </h1>
                 <a
                   href="#"
-                  className="bg-black text-sm px-[2.5rem] py-4 rounded-lg text-white min-[576px]:py-4 min-[576px]:px-[5.5rem] md:text-base"
+                  className="question_link bg-black text-sm px-[2.5rem] py-4 rounded-lg text-white min-[576px]:py-4 min-[576px]:px-[5.5rem] md:text-base"
                 >
                   Talk to us
                 </a>
@@ -547,4 +167,158 @@ function App() {
   );
 }
 
+//
+
 export default App;
+
+{
+  /* <div className="relative">
+          <section className="mt-[4.94rem] flex items-center justify-center gap-[4.625rem]">
+            <div className="section_left">
+              <div className="section_inner section_sticky">
+                {" "}
+                <div className="flex items-start gap-[1.9375rem]">
+                  <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
+                  <div className="md:w-[20.125rem]">
+                    <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
+                      BECON FOR EVERYONE
+                    </h1>
+                    <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
+                      Men and women gather from all over the world for a great
+                      encounter, irrespective of denomination and culture.
+                      Believers’ Convention provides a platform for intense
+                      fellowship with the Lord and the brethren.
+                    </p>
+                    <br />
+                    <span className="block font-normal text-sm sm:text-[15px] md:text-base">
+                      BECON FOR EVERYONE HOLDS:
+                    </span>
+                    <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
+                      AUG 6TH - 12TH, 2023
+                    </span>
+                    <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
+                      <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
+                        Add to calendar
+                      </p>
+                      <div className="flex items-center justify-center text-[#B88D38]">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="section_right">
+              <div className="section_inner section_sticky">
+                {" "}
+                <div className="section_bg max-w-full">
+                  <img
+                    src={everyone}
+                    alt="a believer"
+                    className="w-full h-auto sm:w-[33.6875rem]"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="mt-[4.94rem] flex items-center justify-center gap-[4.625rem]">
+            <div className="section_left">
+              <div className="section_inner section_sticky">
+                {" "}
+                <div className="flex items-start gap-[1.9375rem]">
+                  <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
+                  <div className="md:w-[20.125rem]">
+                    <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
+                      BECON FOR TEENS
+                    </h1>
+                    <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
+                      Men and women gather from all over the world for a great
+                      encounter, irrespective of denomination and culture.
+                      Believers’ Convention provides a platform for intense
+                      fellowship with the Lord and the brethren.
+                    </p>
+                    <br />
+                    <span className="block font-normal text-sm sm:text-[15px] md:text-base">
+                      BECON FOR TEENS HOLDS:
+                    </span>
+                    <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
+                      AUG 6TH - 12TH, 2023
+                    </span>
+                    <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
+                      <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
+                        Add to calendar
+                      </p>
+                      <div className="flex items-center justify-center text-[#B88D38]">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="section_right">
+              <div className="section_inner section_sticky">
+                {" "}
+                <div className="section_bg max-w-full">
+                  <img
+                    src={teens}
+                    alt="a believer"
+                    className="w-full h-auto sm:w-[33.6875rem]"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="mt-[4.94rem] flex items-center justify-center gap-[4.625rem]">
+            <div className="section_left">
+              <div className="section_inner section_sticky">
+                {" "}
+                <div className="flex items-start gap-[1.9375rem]">
+                  <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
+                  <div className="md:w-[20.125rem]">
+                    <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
+                      BECON FOR KIDS
+                    </h1>
+                    <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
+                      Men and women gather from all over the world for a great
+                      encounter, irrespective of denomination and culture.
+                      Believers’ Convention provides a platform for intense
+                      fellowship with the Lord and the brethren.
+                    </p>
+                    <br />
+                    <span className="block font-normal text-sm sm:text-[15px] md:text-base">
+                      BECON FOR EVERYONE KIDS:
+                    </span>
+                    <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
+                      AUG 6TH - 12TH, 2023
+                    </span>
+                    <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
+                      <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
+                        Add to calendar
+                      </p>
+                      <div className="flex items-center justify-center text-[#B88D38]">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="section_right">
+              <div className="section_inner section_sticky">
+                {" "}
+                <div className="section_bg max-w-full">
+                  <img
+                    src={kids}
+                    alt="a believer"
+                    className="w-full h-auto sm:w-[33.6875rem]"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div> */
+}

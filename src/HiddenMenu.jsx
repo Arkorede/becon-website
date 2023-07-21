@@ -40,7 +40,7 @@ const HiddenMenu = ({ setShowMenu }) => {
           </a>
           <a
             href="#"
-            className="bg-black text-white font-normal text-sm px-[4.2rem] py-4 rounded-lg sm:text-sm sm:px-[5.5rem]"
+            className="register_link bg-black text-white font-normal text-sm px-[4.2rem] py-4 rounded-lg sm:text-sm sm:px-[5.5rem]"
           >
             Register now
           </a>
