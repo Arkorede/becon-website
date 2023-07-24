@@ -9,7 +9,7 @@ import Ministers from "./Ministers";
 import Faq from "./Faq";
 import Testimony from "./Testimony";
 import "./App.css";
-// import Try from "./Try";
+import Try from "./Try";
 
 function App() {
   return (

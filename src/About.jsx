@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import everyone from "./assets/everyone.png";
@@ -9,45 +9,64 @@ import "./App.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  // useEffect(() => {
-  //   const details = gsap.utils.toArray(
-  //     ".desktopContentSection:not(:first-child)"
-  //   );
-  //   const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
+  const left = useRef();
+  const about_gallery = useRef();
+  const desktopPhotos = useRef();
+  const contentRef1 = useRef();
+  const contentRef2 = useRef();
+  const photoRef = useRef();
+  const photoRef1 = useRef();
+  const photoRef2 = useRef();
+  const right = useRef();
 
-  //   gsap.set(photos, { xPercent: 101 });
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const details = new Array();
+      details.push(contentRef1.current, contentRef2.current);
 
-  //   const allPhotos = gsap.utils.toArray(".desktopPhoto");
+      const photos = new Array();
+      photos.push(photoRef1.current, photoRef2.current);
 
-  //   let mm = gsap.matchMedia();
+      gsap.set(photos, { xPercent: 101 });
 
-  //   mm.add("(min-width: 640px)", () => {
-  //     ScrollTrigger.create({
-  //       trigger: ".about_gallery",
-  //       start: "top top",
-  //       end: "bottom bottom",
-  //       pin: ".about_gallery",
-  //     });
+      const allPhotos = new Array();
+      allPhotos.push(photoRef.current, photoRef1.current, photoRef2.current);
 
-  //     details.forEach((detail, index) => {
-  //       let headline = detail.querySelector("h1");
-  //       let animation = gsap.timeline().to(photos[index], { xPercent: 0 });
-  //       // .set(allPhotos[index], { autoAlpha: 0 });
+      let mm = gsap.matchMedia();
 
-  //       ScrollTrigger.create({
-  //         trigger: headline,
-  //         start: "top 80%",
-  //         end: "top 50%",
-  //         animation: animation,
-  //         scrub: true,
-  //         markers: false,
-  //       });
-  //     });
-  //   });
-  // }, []);
+      mm.add("(min-width: 600px)", () => {
+        ScrollTrigger.create({
+          trigger: about_gallery.current,
+          start: "top top",
+          end: "bottom bottom",
+          pin: right.current,
+        });
+
+        details.forEach((detail, index) => {
+          let headline = detail.querySelector("p");
+          let animation = gsap
+            .timeline()
+            .to(photos[index], { xPercent: 0 })
+            .set(allPhotos[index], { autoAlpha: 0 });
+
+          ScrollTrigger.create({
+            trigger: headline,
+            start: "top 80%",
+            end: "bottom 50%",
+            animation: animation,
+            scrub: true,
+            markers: false,
+          });
+        });
+      });
+    }, []);
+
+    return () => ctx.revert();
+  });
+
   return (
     <div className="">
-      {/* <div className="hidden mt-[7.69rem] sm:block sm:px-32">
+      <div className="hidden mt-[7.69rem] sm:px-32 sm:block">
         <div className="flex flex-col items-center justify-center justify-between md:flex-row">
           <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
             ABOUT{" "}
@@ -64,121 +83,123 @@ const About = () => {
             furnish the hearts of saints to inherit eternal life ultimately.
           </p>
         </div>
-        <div className="about_gallery">
-          <div className="left">
-            <div className="desktopContent">
-              <div className="desktopContentSection">
-                <div className="flex items-start gap-[1.9375rem]">
-                  <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
-                  <div className="md:w-[20.125rem]">
-                    <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
-                      BECON FOR EVERYONE
-                    </h1>
-                    <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
-                      Men and women gather from all over the world for a great
-                      encounter, irrespective of denomination and culture.
-                      Believers’ Convention provides a platform for intense
-                      fellowship with the Lord and the brethren.
+      </div>
+
+      <div className="hidden about_gallery sm:block" ref={about_gallery}>
+        <div className="left" ref={left}>
+          <div className="desktopContent">
+            {/* BECON FOR ADULTS */}
+            <div className="desktopContentSection">
+              <div className="event flex items-start gap-[1.9375rem]">
+                <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
+                <div className="md:w-[20.125rem]">
+                  <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
+                    BECON FOR ADULTS
+                  </h1>
+                  <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
+                    Men and women gather from all over the world for a great
+                    encounter, irrespective of denomination and culture.
+                    Believers’ Convention provides a platform for intense
+                    fellowship with the Lord and the brethren.
+                  </p>
+                  <br />
+                  <span className="block font-normal text-sm sm:text-[15px] md:text-base">
+                    BECON FOR ADULTS HOLDS:
+                  </span>
+                  <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
+                    AUG 6TH - 12TH, 2023
+                  </span>
+                  <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
+                    <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
+                      Add to calendar
                     </p>
-                    <br />
-                    <span className="block font-normal text-sm sm:text-[15px] md:text-base">
-                      BECON FOR EVERYONE HOLDS:
-                    </span>
-                    <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
-                      AUG 6TH - 12TH, 2023
-                    </span>
-                    <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
-                      <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
-                        Add to calendar
-                      </p>
-                      <div className="flex items-center justify-center text-[#B88D38]">
-                        <ion-icon name="calendar-outline"></ion-icon>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="desktopContentSection">
-                <div className="flex items-start gap-[1.9375rem]">
-                  <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
-                  <div className="event md:w-[20.125rem]">
-                    <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
-                      BECON FOR TEENS
-                    </h1>
-                    <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
-                      Men and women gather from all over the world for a great
-                      encounter, irrespective of denomination and culture.
-                      Believers’ Convention provides a platform for intense
-                      fellowship with the Lord and the brethren.
-                    </p>
-                    <br />
-                    <span className="block font-normal text-sm sm:text-[15px] md:text-base">
-                      BECON FOR EVERYONE TEENS:
-                    </span>
-                    <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
-                      AUG 6TH - 12TH, 2023
-                    </span>
-                    <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
-                      <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
-                        Add to calendar
-                      </p>
-                      <div className="flex items-center justify-center text-[#B88D38]">
-                        <ion-icon name="calendar-outline"></ion-icon>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="desktopContentSection">
-                <div className="flex items-start gap-[1.9375rem]">
-                  <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
-                  <div className="event md:w-[20.125rem]">
-                    <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
-                      BECON FOR KIDS
-                    </h1>
-                    <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
-                      Men and women gather from all over the world for a great
-                      encounter, irrespective of denomination and culture.
-                      Believers’ Convention provides a platform for intense
-                      fellowship with the Lord and the brethren.
-                    </p>
-                    <br />
-                    <span className="block font-normal text-sm sm:text-[15px] md:text-base">
-                      BECON FOR KIDS HOLDS:
-                    </span>
-                    <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
-                      AUG 6TH - 12TH, 2023
-                    </span>
-                    <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
-                      <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
-                        Add to calendar
-                      </p>
-                      <div className="flex items-center justify-center text-[#B88D38]">
-                        <ion-icon name="calendar-outline"></ion-icon>
-                      </div>
-                    </button>
-                  </div>
+                    <div className="flex items-center justify-center text-[#B88D38]">
+                      <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="right">
-            <div className="desktopPhotos">
-              <div className="desktopPhoto">
-                {" "}
-                <img src={everyone} alt="" />
+            {/* BECON FOR TEENS */}
+            <div className="desktopContentSection" ref={contentRef1}>
+              <div className="event flex items-start gap-[1.9375rem]">
+                <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
+                <div className="md:w-[20.125rem]">
+                  <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
+                    BECON FOR TEENS
+                  </h1>
+                  <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
+                    Men and women gather from all over the world for a great
+                    encounter, irrespective of denomination and culture.
+                    Believers’ Convention provides a platform for intense
+                    fellowship with the Lord and the brethren.
+                  </p>
+                  <br />
+                  <span className="block font-normal text-sm sm:text-[15px] md:text-base">
+                    BECON FOR TEENS HOLDS:
+                  </span>
+                  <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
+                    AUG 6TH - 12TH, 2023
+                  </span>
+                  <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
+                    <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
+                      Add to calendar
+                    </p>
+                    <div className="flex items-center justify-center text-[#B88D38]">
+                      <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+                  </button>
+                </div>
               </div>
-              <div className="desktopPhoto">
-                <img src={teens} alt="" />
-              </div>
-              <div className="desktopPhoto">
-                <img src={kids} alt="" />
+            </div>
+            {/* BECON FOR KIDS */}
+            <div className="desktopContentSection" ref={contentRef2}>
+              <div className="event flex items-start gap-[1.9375rem]">
+                <p className="bg-[#B88D38] w-[0.5625rem] h-[11.8rem]"></p>
+                <div className="md:w-[20.125rem]">
+                  <h1 className="text-2xl text-[#B88D38] font-extrabold leading-[1.9rem]">
+                    BECON FOR KIDS
+                  </h1>
+                  <p className="text-sm text-[#000000b3] font-normal leading-[156%]">
+                    Men and women gather from all over the world for a great
+                    encounter, irrespective of denomination and culture.
+                    Believers’ Convention provides a platform for intense
+                    fellowship with the Lord and the brethren.
+                  </p>
+                  <br />
+                  <span className="block font-normal text-sm sm:text-[15px] md:text-base">
+                    BECON FOR KIDS HOLDS:
+                  </span>
+                  <span className="block font-semibold text-sm mt-[-3px] sm:text-base md:text-lg">
+                    AUG 6TH - 12TH, 2023
+                  </span>
+                  <button className="flex items-center justify-center px-6 py-2 gap-2 rounded-3xl bg-[#F5F1E7] mt-4 sm:mt-6">
+                    <p className="text-sm text-[#B88D38] font-normal sm:text-[15px] md:text-base">
+                      Add to calendar
+                    </p>
+                    <div className="flex items-center justify-center text-[#B88D38]">
+                      <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div> */}
+        <div className="right" ref={right}>
+          <div className="desktopPhotos" ref={desktopPhotos}>
+            <div className="desktopPhoto" ref={photoRef}>
+              <img src={everyone} alt="a believer" />
+            </div>
+            <div className="desktopPhoto" ref={photoRef1}>
+              <img src={teens} alt="a believer" />
+            </div>
+            <div className="desktopPhoto" ref={photoRef2}>
+              <img src={kids} alt="a believer" />
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* ABOUT SECTION FOR MOBILE */}
       <div className="px-16 mt-[4.5rem] sm:hidden">
@@ -413,3 +434,35 @@ export default About;
 //       }
 //     );
 //   }, []);
+
+// useLayoutEffect(() => {
+//   let ctx = gsap.context(() => {
+//     let details = gsap.utils.toArray(".desktopContentSection");
+
+//     details.forEach((detail) => {
+//       gsap.to(detail, {
+//         yPercent: 100,
+//         scrollTrigger: {
+//           trigger: left.current,
+//           scrub: true,
+//           start: "top top",
+//           end: "bottom top",
+//         },
+//       });
+//     });
+
+//     let photos = gsap.utils.toArray(".desktopPhoto");
+//     gsap.set(photos, { xPercent: 100 });
+
+//     ScrollTrigger.create({
+//       trigger: right.current,
+//       pin: desktopPhotos.current,
+//       pinSpacing: false,
+//       start: "top top",
+//       end: "bottom top",
+//       scrub: true,
+//     });
+//   }, []);
+
+//   return () => ctx.revert();
+// });

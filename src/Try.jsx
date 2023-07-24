@@ -17,6 +17,7 @@ const Try = () => {
         end: "bottom top",
         toggleActions: "restart pause reverse pause",
         markers: true,
+        pin: ".ghost",
         scrub: 1,
       },
       x: 400,
@@ -40,3 +41,36 @@ const Try = () => {
 };
 
 export default Try;
+
+// useLayoutEffect(() => {
+//   let ctx = gsap.context(() => {
+//     let details = gsap.utils.toArray(".desktopContentSection");
+
+//     details.forEach((detail) => {
+//       let headline = detail.querySelec;
+//       gsap.to(detail, {
+//         yPercent: 100 * (details.length - 1),
+//         scrollTrigger: {
+//           trigger: left.current,
+//           scrub: true,
+//           start: "top top",
+//           end: () => "+=" + left.current.offsetWidth,
+//         },
+//       });
+//     });
+
+//     let photos = gsap.utils.toArray(".desktopPhoto");
+//     gsap.set(photos, { xPercent: 100 });
+
+//     ScrollTrigger.create({
+//       trigger: right.current,
+//       pin: desktopPhotos.current,
+//       pinSpacing: false,
+//       start: "top top",
+//       end: "bottom top",
+//       scrub: true,
+//     });
+//   }, []);
+
+//   return () => ctx.revert();
+// });

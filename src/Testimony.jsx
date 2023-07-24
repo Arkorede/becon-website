@@ -31,7 +31,7 @@ const Testimonial = () => {
                 Lord and the brethren.
               </p>
             </div>
-            <div className="testimony_img_container max-w-full px-4 pt-4 min-[768px]:p-0">
+            <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
               <img src={testimony_img} alt="" className="w-full h-auto" />
             </div>
           </div>
@@ -61,7 +61,7 @@ const Testimonial = () => {
                 Lord and the brethren.
               </p>
             </div>
-            <div className="testimony_img_container max-w-full px-4 pt-4 min-[768px]:p-0">
+            <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
               <img src={testimony_img} alt="" className="w-full h-auto" />
             </div>
           </div>
@@ -91,7 +91,7 @@ const Testimonial = () => {
                 Lord and the brethren.
               </p>
             </div>
-            <div className="testimony_img_container max-w-full px-4 pt-4 min-[768px]:p-0">
+            <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
               <img src={testimony_img} alt="" className="w-full h-auto" />
             </div>
           </div>
@@ -121,7 +121,7 @@ const Testimonial = () => {
                 Lord and the brethren.
               </p>
             </div>
-            <div className="testimony_img_container max-w-full px-4 pt-4 min-[768px]:p-0">
+            <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
               <img src={testimony_img} alt="" className="w-full h-auto" />
             </div>
           </div>
