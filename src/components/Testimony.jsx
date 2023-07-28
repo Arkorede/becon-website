@@ -1,10 +1,10 @@
-import testimony_img from "./assets/testimony_img.png";
-import small_testimonial_img from "./assets/small_testimonial_img.png";
+import testimony_img from "../assets/testimony_img.png";
+import small_testimonial_img from "../assets/small_testimonial_img.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 const Testimonial = () => {
   return (
-    <div className="relative bg-black h-[42rem] min-[440px]:h-[44rem] min-[480px]:h-[46rem] min-[572px]:h-[48rem] min-[622px]:h-[50rem] min-[678px]:h-[53rem] min-[680px]:h-[54rem] min-[768px]:h-[21rem] md:h-auto mt-[3.75rem] md:pl-24 lg:pl-32">
+    <section className="relative bg-black h-[42rem] min-[440px]:h-[44rem] min-[480px]:h-[46rem] min-[572px]:h-[48rem] min-[622px]:h-[50rem] min-[678px]:h-[53rem] min-[680px]:h-[54rem] min-[768px]:h-[21rem] md:h-auto mt-[3.75rem] md:pl-24 lg:pl-32">
       <Tabs>
         <TabPanel>
           <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
@@ -172,7 +172,7 @@ const Testimonial = () => {
           </div>
         </TabList>
       </Tabs>
-    </div>
+    </section>
   );
 };
 

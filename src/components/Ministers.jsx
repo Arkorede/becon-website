@@ -1,9 +1,9 @@
-import minister1 from "./assets/minister1.png";
-import egfm_logo from "./assets/egfm_logo.png";
+import minister1 from "../assets/minister1.png";
+import egfm_logo from "../assets/egfm_logo.png";
 
 const Ministers = () => {
   return (
-    <div>
+    <section>
       <div className="flex items-center justify-center mt-[5.72rem] gap-5">
         <img
           src={egfm_logo}
@@ -104,7 +104,7 @@ const Ministers = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

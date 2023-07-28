@@ -1,10 +1,10 @@
 import { useState } from "react";
-import egfm_logo from "./assets/egfm_logo.png";
-import fountainstream_logo from "./assets/fountainstream_logo.png";
-import mixlr_logo from "./assets/mixlr_logo.png";
-import waystream_logo from "./assets/waystream_logo.png";
+import egfm_logo from "../assets/egfm_logo.png";
+import fountainstream_logo from "../assets/fountainstream_logo.png";
+import mixlr_logo from "../assets/mixlr_logo.png";
+import waystream_logo from "../assets/waystream_logo.png";
 // import instagram_logo from "./assets/instagram_logo.png";
-import arrow_down from "./assets/arrow_down.png";
+import arrow_down from "../assets/arrow_down.png";
 import { FaBars } from "react-icons/fa";
 import HiddenMenu from "./HiddenMenu";
 
@@ -16,9 +16,9 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <header>
       {" "}
-      <header className="relative py-4">
+      <div className="relative py-4">
         <nav className="flex items-center justify-center justify-between px-16 md:px-32">
           <div className="flex items-center justify-center gap-4">
             <img
@@ -27,8 +27,12 @@ const Header = () => {
               className="w-[3.1875rem] h-[3.1875rem]"
             />
             <div className="flex items-center justify-center gap-2">
-              <p className="hidden font-normal text-sm md:block">About EGFM</p>
-              <p className="hidden font-normal text-sm md:block">FAQ</p>
+              <a href="" className="hidden font-normal text-sm md:block">
+                About EGFM
+              </a>
+              <a href="#faq" className="hidden font-normal text-sm md:block">
+                FAQ
+              </a>
             </div>
           </div>
 
@@ -134,8 +138,8 @@ const Header = () => {
             <HiddenMenu setShowMenu={setShowMenu} />
           </div>
         )}
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
 

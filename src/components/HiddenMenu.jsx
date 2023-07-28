@@ -1,8 +1,8 @@
-import egfm_logo from "./assets/egfm_logo.png";
-import fountainstream_logo from "./assets/fountainstream_logo.png";
-import mixlr_logo from "./assets/mixlr_logo.png";
-import waystream_logo from "./assets/waystream_logo.png";
-import instagram_logo from "./assets/instagram_logo.png";
+import egfm_logo from "../assets/egfm_logo.png";
+import fountainstream_logo from "../assets/fountainstream_logo.png";
+import mixlr_logo from "../assets/mixlr_logo.png";
+import waystream_logo from "../assets/waystream_logo.png";
+import instagram_logo from "../assets/instagram_logo.png";
 
 const HiddenMenu = ({ setShowMenu }) => {
   const handleCancelClick = () => {

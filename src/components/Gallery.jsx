@@ -1,14 +1,14 @@
-import gallery from "./assets/gallery.png";
-import gallery1 from "./assets/gallery1.png";
-import gallery2 from "./assets/gallery2.png";
-import gallery3 from "./assets/gallery3.png";
-import gallery4 from "./assets/gallery4.png";
-import gallery5 from "./assets/gallery5.png";
-import gallery6 from "./assets/gallery6.png";
+import gallery from "../assets/gallery.png";
+import gallery1 from "../assets/gallery1.png";
+import gallery2 from "../assets/gallery2.png";
+import gallery3 from "../assets/gallery3.png";
+import gallery4 from "../assets/gallery4.png";
+import gallery5 from "../assets/gallery5.png";
+import gallery6 from "../assets/gallery6.png";
 
 const Gallery = () => {
   return (
-    <div className="">
+    <section className="">
       <div className="grid grid-cols-2 gap-2 mt-[4.5rem] min-[480px]:grid-cols-3 sm:hidden">
         <div className="flex flex-col items-center justify-center gap-2">
           <img src={gallery1} alt="believers" />
@@ -56,7 +56,7 @@ const Gallery = () => {
           </div>
         </figure>
       </div>
-    </div>
+    </section>
   );
 };
 

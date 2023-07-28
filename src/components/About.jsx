@@ -1,10 +1,10 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import everyone from "./assets/everyone.png";
-import teens from "./assets/teens.png";
-import kids from "./assets/kids.png";
-import "./App.css";
+import everyone from "../assets/everyone.png";
+import teens from "../assets/teens.png";
+import kids from "../assets/kids.png";
+// import "./App.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,31 +32,27 @@ const About = () => {
       const allPhotos = new Array();
       allPhotos.push(photoRef.current, photoRef1.current, photoRef2.current);
 
-      let mm = gsap.matchMedia();
+      ScrollTrigger.create({
+        trigger: about_gallery.current,
+        start: "top top",
+        end: "bottom bottom",
+        pin: right.current,
+      });
 
-      mm.add("(min-width: 600px)", () => {
+      details.forEach((detail, index) => {
+        let headline = detail.querySelector("p");
+        let animation = gsap
+          .timeline()
+          .to(photos[index], { xPercent: 0 })
+          .set(allPhotos[index], { autoAlpha: 0 });
+
         ScrollTrigger.create({
-          trigger: about_gallery.current,
-          start: "top top",
-          end: "bottom bottom",
-          pin: right.current,
-        });
-
-        details.forEach((detail, index) => {
-          let headline = detail.querySelector("p");
-          let animation = gsap
-            .timeline()
-            .to(photos[index], { xPercent: 0 })
-            .set(allPhotos[index], { autoAlpha: 0 });
-
-          ScrollTrigger.create({
-            trigger: headline,
-            start: "top 80%",
-            end: "bottom 50%",
-            animation: animation,
-            scrub: true,
-            markers: false,
-          });
+          trigger: headline,
+          start: "top 80%",
+          end: "bottom 50%",
+          animation: animation,
+          scrub: true,
+          markers: false,
         });
       });
     }, []);
@@ -65,8 +61,8 @@ const About = () => {
   });
 
   return (
-    <div className="">
-      <div className="hidden mt-[7.69rem] sm:px-32 sm:block">
+    <section className="">
+      <div className="hidden mt-[7.69rem] sm:px-32 sm:flex">
         <div className="flex flex-col items-center justify-center justify-between md:flex-row">
           <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
             ABOUT{" "}
@@ -85,7 +81,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="hidden about_gallery sm:block" ref={about_gallery}>
+      <div className="hidden about_gallery sm:flex" ref={about_gallery}>
         <div className="left" ref={left}>
           <div className="desktopContent">
             {/* BECON FOR ADULTS */}
@@ -330,7 +326,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

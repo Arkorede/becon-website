@@ -1,4 +1,4 @@
-import hero_img from "./assets/hero_img.png";
+import hero_img from "../assets/hero_img.png";
 import { useEffect, useRef, useState } from "react";
 
 const Hero = () => {
@@ -46,7 +46,7 @@ const Hero = () => {
   });
 
   return (
-    <div>
+    <section>
       <div className="mt-12 flex flex-col items-center justify-center gap-[7.5rem] md:flex-row md:px-32">
         <div className="flex flex-col items-center justify-center md:block">
           <h1 className="font-[1000] w-56 text-center text-4xl md:text-6xl md:text-left xl:text-5xl">
@@ -152,7 +152,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
