@@ -10,13 +10,9 @@ import Faq from "./components/Faq";
 import Testimony from "./components/Testimony";
 import Footer from "./components/Footer";
 import "./App.css";
-// import Try from "./Try";
 
 function App() {
   return (
-    // <div className="">
-    //   <Try />
-    // </div>
     <>
       <div className="max-[412px]:w-[412px]">
         <Header />
