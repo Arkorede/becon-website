@@ -1,23 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+@font-face {
+  font-family: "SFPro";
+  src: local("SF-Pro"),
+    url(./fonts/SF-Pro-Display-LightItalic.otf) format("otf");
+} */
 
 @font-face {
   font-family: "SF Pro";
-  src: url("fonts/SFPRODISPLAYBOLD.OTF");
+  src: url("fonts/SF-Pro-Display-Bold.otf");
 }
+/* 
+@layer base {
+  html {
+    font-family: "SF Pro";
+  }
+} */
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "SF Pro", sans-serif;
-}
+/* body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu;
+} */
 
-body {
+/* body {
   font-family: "SF Pro Display", sans-serif;
-}
+} */
+
+/* body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+} */
 
 /* MINISTER/PARTICIPANT */
 .attend-tab-list {

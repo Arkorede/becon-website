@@ -108,6 +108,10 @@ figure {
   margin-top: 4.5rem;
 }
 
+#faq {
+  scroll-margin-top: 40px;
+}
+
 @keyframes move {
   0% {
     left: 0;
@@ -175,6 +179,12 @@ figure {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.becon_bg {
+  background-image: url("./assets/becon_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .about_gallery {

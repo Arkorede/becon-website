@@ -45,25 +45,34 @@ const Faq = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center mt-8 px-10 min-[480px]:px-12 min-[576px]:mt-4 sm:px-16">
-      <div className="w-full">
-        {data.map((item, i) => (
-          <div className="p-4 bg-[#FAFAFA] rounded-lg mb-4" key={item.id}>
-            <div className="cursor-pointer w-full" onClick={() => toggle(i)}>
-              <h2 className="flex items-center justify-between text-lg font-semibold leading-[146%] sm:text-xl md:text-2xl">
-                {item.question}
-                <span className="font-normal">
-                  {selected === i ? "-" : "+"}
-                </span>
-              </h2>
-            </div>
-            {selected === i ? (
-              <div className="text-sm text-[#000000b3] font-normal leading-[146%] mt-2 md:text-base">
-                {item.answer}
+    <div className="mt-[6.94rem]" id="faq">
+      <h1 className="text-sm text-[#B88D38] text-center font-medium leading-[1.9rem] tracking-[.8rem] sm:text-[15px] md:text-base">
+        FAQS
+      </h1>
+      <h1 className="text-xl text-center font-extrabold leading-[1.9rem] mt-1 sm:text-[21px] md:text-2xl">
+        FREQUENTLY ASKED QUESTIONS
+      </h1>
+
+      <div className="flex items-center justify-center mt-8 px-10 min-[480px]:px-12 min-[576px]:mt-4 sm:px-16">
+        <div className="w-full">
+          {data.map((item, i) => (
+            <div className="p-4 bg-[#FAFAFA] rounded-lg mb-4" key={item.id}>
+              <div className="cursor-pointer w-full" onClick={() => toggle(i)}>
+                <h2 className="flex items-center justify-between text-lg font-semibold leading-[146%] sm:text-xl md:text-2xl">
+                  {item.question}
+                  <span className="font-normal">
+                    {selected === i ? "-" : "+"}
+                  </span>
+                </h2>
               </div>
-            ) : null}
-          </div>
-        ))}
+              {selected === i ? (
+                <div className="text-sm text-[#000000b3] font-normal leading-[146%] mt-2 md:text-base">
+                  {item.answer}
+                </div>
+              ) : null}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

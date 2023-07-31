@@ -9,7 +9,7 @@ import gallery6 from "../assets/gallery6.png";
 const Gallery = () => {
   return (
     <section className="">
-      <div className="grid grid-cols-2 gap-2 mt-[4.5rem] min-[480px]:grid-cols-3 sm:hidden">
+      <div className="grid grid-cols-2 gap-2 min-[480px]:grid-cols-3 sm:hidden mt-[4.38rem]">
         <div className="flex flex-col items-center justify-center gap-2">
           <img src={gallery1} alt="believers" />
           <img src={gallery2} alt="believers" />

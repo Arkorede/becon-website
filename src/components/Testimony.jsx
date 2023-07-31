@@ -1,179 +1,74 @@
-import testimony_img from "../assets/testimony_img.png";
-import small_testimonial_img from "../assets/small_testimonial_img.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Minister from "./Minister";
+import Gallery from "./Gallery";
+import Stream from "./Stream";
 
-const Testimonial = () => {
+const Testimony = () => {
   return (
-    <section className="relative bg-black h-[42rem] min-[440px]:h-[44rem] min-[480px]:h-[46rem] min-[572px]:h-[48rem] min-[622px]:h-[50rem] min-[678px]:h-[53rem] min-[680px]:h-[54rem] min-[768px]:h-[21rem] md:h-auto mt-[3.75rem] md:pl-24 lg:pl-32">
+    <section className="">
+      <div className="flex items-center justify-center p-2 min-[480px]:p-0 mt-[6.88rem] md:mt-[11.88rem]">
+        <h1 className="text-lg text-center font-extrabold leading-[1.6rem] w-full min-[480px]:text-[21px] sm:w-[25.375rem] sm:leading-[1.9rem] sm:text-2xl">
+          WHY YOU SHOULD ATTEND BELIEVERS’ CONVENTION?
+        </h1>
+      </div>
       <Tabs>
-        <TabPanel>
-          <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
-            <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
-              <h1 className="text-[20px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
-                Pst. Emeka Egwuchukwu&apos;s Testimony
-              </h1>
-              <p className="text-sm text-[#ffffffcc] font-normal leading-[126%] min-[768px]:leading-[120%] mt-2 min-[768px]:text-[10.5px] min-[912px]:leading-[108%] min-[795px]:text-[11px] min-[912px]:text-xs min-[972px]:leading-[99%] min-[972px]:text-[13px] md:text-[13px] min-[1034px]:leading-[108%] min-[1070px]:leading-[140%] min-[1090px]:leading-[126%] min-[1090px]:text-sm lg:text-base min-[1138px]:text-[15px] min-[1138px]:leading-[132%] lg:leading-[132%] min-[1246px]:leading-[132%]">
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-                <br />
-                <br className="" />
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-                <br />
-                <br />
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-              </p>
-            </div>
-            <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
-              <img src={testimony_img} alt="" className="w-full h-auto" />
-            </div>
-          </div>
-        </TabPanel>
-        <TabPanel>
-          <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
-            <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
-              <h1 className="text-[22px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
-                Pst. Thompson Ehima&apos;s Testimony
-              </h1>
-              <p className="text-sm text-[#ffffffcc] font-normal leading-[126%] min-[768px]:leading-[120%] mt-2 min-[768px]:text-[10.5px] min-[912px]:leading-[108%] min-[795px]:text-[11px] min-[912px]:text-xs min-[972px]:leading-[99%] min-[972px]:text-[13px] md:text-[13px] min-[1034px]:leading-[108%] min-[1070px]:leading-[140%] min-[1090px]:leading-[126%] min-[1090px]:text-sm lg:text-base min-[1138px]:text-[15px] min-[1138px]:leading-[132%] lg:leading-[132%] min-[1246px]:leading-[132%]">
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-                <br />
-                <br className="" />
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-                <br />
-                <br />
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-              </p>
-            </div>
-            <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
-              <img src={testimony_img} alt="" className="w-full h-auto" />
-            </div>
-          </div>
-        </TabPanel>
-        <TabPanel>
-          <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
-            <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
-              <h1 className="text-[22px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
-                Pst. Tayo Fasan&apos;s Testimony
-              </h1>
-              <p className="text-sm text-[#ffffffcc] font-normal leading-[126%] min-[768px]:leading-[120%] mt-2 min-[768px]:text-[10.5px] min-[912px]:leading-[108%] min-[795px]:text-[11px] min-[912px]:text-xs min-[972px]:leading-[99%] min-[972px]:text-[13px] md:text-[13px] min-[1034px]:leading-[108%] min-[1070px]:leading-[140%] min-[1090px]:leading-[126%] min-[1090px]:text-sm lg:text-base min-[1138px]:text-[15px] min-[1138px]:leading-[132%] lg:leading-[132%] min-[1246px]:leading-[132%]">
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-                <br />
-                <br className="" />
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-                <br />
-                <br />
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-              </p>
-            </div>
-            <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
-              <img src={testimony_img} alt="" className="w-full h-auto" />
-            </div>
-          </div>
-        </TabPanel>
-        <TabPanel>
-          <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
-            <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
-              <h1 className="text-[22px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
-                Pst. Moses Omokhafe&apos;s Testimony
-              </h1>
-              <p className="text-sm text-[#ffffffcc] font-normal leading-[126%] min-[768px]:leading-[120%] mt-2 min-[768px]:text-[10.5px] min-[912px]:leading-[108%] min-[795px]:text-[11px] min-[912px]:text-xs min-[972px]:leading-[99%] min-[972px]:text-[13px] md:text-[13px] min-[1034px]:leading-[108%] min-[1070px]:leading-[140%] min-[1090px]:leading-[126%] min-[1090px]:text-sm lg:text-base min-[1138px]:text-[15px] min-[1138px]:leading-[132%] lg:leading-[132%] min-[1246px]:leading-[132%]">
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-                <br />
-                <br className="" />
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-                <br />
-                <br />
-                Men and women gather from all over the world for a great
-                encounter, irrespective of denomination and culture. Believers’
-                Convention provides a platform for intense fellowship with the
-                Lord and the brethren.
-              </p>
-            </div>
-            <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
-              <img src={testimony_img} alt="" className="w-full h-auto" />
-            </div>
-          </div>
-        </TabPanel>
-        <TabList>
-          <div className="flex items-center justify-start ml-12 gap-2 mt-[-365px] min-[514px]:mt-[-312px] min-[690px]:mt-[-260px] min-[734px]:mt-[-260px] min-[768px]:mt-[-33px] min-[829px]:mt-[-49px] md:mt-[-58.6px] md:ml-0">
-            <Tab
-              className={"testimonial-tab"}
-              selectedClassName="testimonial-tabs--selected"
-            >
-              {" "}
-              <img
-                src={small_testimonial_img}
-                alt=""
-                className="min-[768px]:w-8 min-[768px]:h-8 min-[829px]:h-[43px] min-[829px]:w-[43px] min-[916px]:w-[49px] min-[916px]:h-[49px] md:w-full rounded-lg"
-              />
-            </Tab>
-            <Tab
-              className={"testimonial-tab"}
-              selectedClassName="testimonial-tabs--selected"
-            >
-              <img
-                src={small_testimonial_img}
-                alt=""
-                className="min-[768px]:w-8 min-[768px]:h-8 min-[829px]:h-[43px] min-[829px]:w-[43px] min-[916px]:w-[49px] min-[916px]:h-[49px] md:w-full rounded-lg"
-              />
-            </Tab>
-            <Tab
-              className={"testimonial-tab"}
-              selectedClassName="testimonial-tabs--selected"
-            >
-              <img
-                src={small_testimonial_img}
-                alt=""
-                className="min-[768px]:w-8 min-[768px]:h-8 min-[829px]:h-[43px] min-[829px]:w-[43px] min-[916px]:w-[49px] min-[916px]:h-[49px] md:w-full rounded-lg"
-              />
-            </Tab>
-            <Tab
-              className={"testimonial-tab"}
-              selectedClassName="testimonial-tabs--selected"
-            >
-              <img
-                src={small_testimonial_img}
-                alt=""
-                className="min-[768px]:w-8 min-[768px]:h-8 min-[829px]:h-[43px] min-[829px]:w-[43px] min-[916px]:w-[49px] min-[916px]:h-[49px] md:w-full rounded-lg"
-              />
-            </Tab>
-          </div>
+        <TabList className={"attend-tab-list"}>
+          <Tab
+            className={"attend-tab"}
+            selectedClassName="attend-tabs__tab--selected"
+          >
+            <p className="text-sm text-center min-[576px]:text-base">
+              Ministers
+            </p>
+          </Tab>
+          <Tab
+            className={"attend-tab"}
+            selectedClassName="attend-tabs__tab--selected"
+            disabled
+          >
+            <p className="text-sm text-center min-[576px]:text-base">
+              Participants
+            </p>
+          </Tab>
         </TabList>
+        <div className="becon_bg">
+          <TabPanel>
+            <Minister />
+          </TabPanel>
+
+          <div className="flex flex-col items-start justify-center justify-between pt-[76px] pl-12 pr-[114px] sm:gap-[5.75rem] sm:flex-row md:pl-24 lg:pl-32 xl:pr-[126px]">
+            <h1 className="text-xl text-white font-extrabold w-full mt-3 sm:text-2xl sm:w-[29.3125rem] sm:mt-0 md:text-4xl">
+              PREVIOUSLY ON{" "}
+              <span className="text-[#B88D38]">EGFM BELIEVERS’ CONVENTION</span>
+            </h1>
+            <p className="text-sm text-[#ffffffcc] font-normal w-full leading-[146%] mt-3 sm:w-[31.875rem] sm:mt-0 md:text-base">
+              9 years and on…
+              <br />
+              <br />
+              Season after season, through the revelation of the divine
+              mysteries, Believers&apos; Convention has become even more
+              beautiful as we have drawn nearer to the things of God’s glory.
+              <br />
+              <br />
+              From the days of{" "}
+              <span className="font-semibold">The Gathering</span> of 2 or 3,
+              till the dawning of{" "}
+              <span className="font-semibold">Who is Like God</span>, the light
+              of the gospel has continued to shine brighter upon every heart
+              that diligently participates.
+            </p>
+          </div>
+
+          <Gallery />
+          <Stream />
+        </div>
+
+        <TabPanel>
+          <h2>Any content</h2>
+        </TabPanel>
       </Tabs>
     </section>
   );
 };
 
-export default Testimonial;
+export default Testimony;
