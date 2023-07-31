@@ -21,7 +21,6 @@ function App() {
         <Questions />
         <NewsLetter />
         <Footer />
-        <img src={becon_bg} alt="" />
       </div>
     </>
   );
