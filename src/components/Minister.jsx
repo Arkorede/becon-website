@@ -10,7 +10,7 @@ const Minister = () => {
         <Tabs>
           <TabPanel>
             <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
-              <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
+              <div className="px-8 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
                 <h1 className="text-[20px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
                   Pst. Emeka Egwuchukwu&apos;s Testimony
                 </h1>
@@ -33,14 +33,14 @@ const Minister = () => {
                   fellowship with the Lord and the brethren.
                 </p>
               </div>
-              <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
+              <div className="testimony_img_container max-w-full px-8 pt-4 min-[768px]:p-0">
                 <img src={testimony_img} alt="" className="w-full h-auto" />
               </div>
             </div>
           </TabPanel>
           <TabPanel>
             <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
-              <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
+              <div className="px-8 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
                 <h1 className="text-[22px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
                   Pst. Thompson Ehima&apos;s Testimony
                 </h1>
@@ -63,14 +63,14 @@ const Minister = () => {
                   fellowship with the Lord and the brethren.
                 </p>
               </div>
-              <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
+              <div className="testimony_img_container max-w-full px-8 pt-4 min-[768px]:p-0">
                 <img src={testimony_img} alt="" className="w-full h-auto" />
               </div>
             </div>
           </TabPanel>
           <TabPanel>
             <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
-              <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
+              <div className="px-8 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
                 <h1 className="text-[22px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
                   Pst. Tayo Fasan&apos;s Testimony
                 </h1>
@@ -93,14 +93,14 @@ const Minister = () => {
                   fellowship with the Lord and the brethren.
                 </p>
               </div>
-              <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
+              <div className="testimony_img_container max-w-full px-8 pt-4 min-[768px]:p-0">
                 <img src={testimony_img} alt="" className="w-full h-auto" />
               </div>
             </div>
           </TabPanel>
           <TabPanel>
             <div className="flex flex-col-reverse items-start justify-center gap-12 min-[1114px]:gap-10 min-[768px]:flex-row">
-              <div className="px-12 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
+              <div className="px-8 mt-14 min-[768px]:mt-2 min-[771px]:mt-4 min-[839px]:mt-7 md:mt-[41.6px] md:px-0 lg:mt-[3rem]">
                 <h1 className="text-[22px] text-white font-normal leading-[146%] min-[768px]:text-[15px] min-[771px]:text-[17px] min-[831px]:text-lg min-[906px]:text-xl min-[972px]:mt-8 md:text-2xl">
                   Pst. Moses Omokhafe&apos;s Testimony
                 </h1>
@@ -123,13 +123,13 @@ const Minister = () => {
                   fellowship with the Lord and the brethren.
                 </p>
               </div>
-              <div className="testimony_img_container max-w-full px-12 pt-4 min-[768px]:p-0">
+              <div className="testimony_img_container max-w-full px-8 pt-4 min-[768px]:p-0">
                 <img src={testimony_img} alt="" className="w-full h-auto" />
               </div>
             </div>
           </TabPanel>
           <TabList>
-            <div className="flex items-center justify-start ml-12 gap-2 mt-[-445px] min-[422px]:mt-[-395px] min-[432px]:mt-[-368px] min-[514px]:mt-[-312px] min-[690px]:mt-[-260px] min-[734px]:mt-[-260px] min-[768px]:mt-[-33px] min-[829px]:mt-[-49px] md:mt-[-58.6px] md:ml-0">
+            <div className="flex items-center justify-start ml-8 gap-2 mt-[-445px] min-[422px]:mt-[-395px] min-[432px]:mt-[-368px] min-[514px]:mt-[-312px] min-[690px]:mt-[-260px] min-[734px]:mt-[-260px] min-[768px]:mt-[-33px] min-[829px]:mt-[-49px] md:mt-[-58.6px] md:ml-0">
               <Tab
                 className={"testimonial-tab"}
                 selectedClassName="testimonial-tabs--selected"

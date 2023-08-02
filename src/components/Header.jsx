@@ -82,7 +82,7 @@ const Header = () => {
                       className="flex items-center justify-start pl-4 gap-1 rounded-sm bg-[#EFF6FF] text-[#1877F2] py-1.5 w-full text-sm"
                     >
                       <ion-icon name="logo-facebook"></ion-icon>
-                      <p className="">Instagram →</p>
+                      <p className="">Facebook →</p>
                     </a>
                   </div>
                   <div className="flex flex-col items-start justify-center gap-3">

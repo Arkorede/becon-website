@@ -2,6 +2,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Minister from "./Minister";
 import Gallery from "./Gallery";
 import Stream from "./Stream";
+// import Try from "./Try";
 
 const Testimony = () => {
   return (
@@ -36,7 +37,7 @@ const Testimony = () => {
             <Minister />
           </TabPanel>
 
-          <div className="flex flex-col items-start justify-center justify-between pt-[76px] pl-12 pr-[114px] sm:gap-[5.75rem] sm:flex-row md:pl-24 lg:pl-32 xl:pr-[126px]">
+          <div className="flex flex-col items-start justify-center justify-between pt-[76px] pl-8 pr-[114px] sm:gap-[5.75rem] sm:flex-row md:pl-24 lg:pl-32 xl:pr-[126px]">
             <h1 className="text-xl text-white font-extrabold w-full mt-3 sm:text-2xl sm:w-[29.3125rem] sm:mt-0 md:text-4xl">
               PREVIOUSLY ON{" "}
               <span className="text-[#B88D38]">EGFM BELIEVERS’ CONVENTION</span>

@@ -1,4 +1,4 @@
-import becon_bg from "./assets/becon_bg.png";
+// import becon_bg from "./assets/becon_bg.png";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
